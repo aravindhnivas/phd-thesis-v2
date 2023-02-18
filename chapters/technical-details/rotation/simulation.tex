@@ -13,7 +13,7 @@ The ROSAA action spectroscopic technique, as described in Section \ref{subsec:RO
 
 % \textbf{Collisional process ($R_{if}$):}
 % \subsubsection{Collisional process ($R$)}
-\subsubsection{Collisional process (\texorpdfstring{$R$}\ )}
+\subsubsection{Collisional process (\texorpdfstring{($R$)}{R})}
 % \subsubsection{Collisional process (R)}
 \label{subsec:ROSAA-simulation-coll}
 
@@ -50,7 +50,7 @@ At a given $T$ (actually $T_{coll}$), if only the collisional process is involve
 where $N$ is the given system's total number of accessible rotational quantum levels, and $Z$ is the molecular partition function.\\ 
 
 % \textbf{Spontaneous emission ($A_{fi}$):}
-\subsubsection{Spontaneous emission (\texorpdfstring{$A$}\ )}
+\subsubsection{Spontaneous emission (\texorpdfstring{$A$}{A} )}
 \label{subsec:ROSAA-simulation-spont}
 
 It is the process in which a quantum mechanical system transits from an excited energy state to a lower lying energy state (e.g., its ground state) and emits a quantized amount of energy in the form of a photon. An initial state $|i\rangle$ with energy $\epsilon_i$ can decay to a final state $|f\rangle$ with energy $\epsilon_f$ via spontaneous emission of a photon with frequency ($\Delta \nu$). The Einstein A-coefficient gives the spontaneous emission rate [in photons per s]:
@@ -71,7 +71,7 @@ where $\epsilon _0$, $h$, $c$ and $\mu _{fi}$ are vacuum permittivity, Planck's 
 
 The spontaneous rates are derived from the effective Hamiltonian fitting of a given molecular species using a program such as Pgopger \cite{western_pgopher_2017}. Typically, spontaneous emission rates are in the order of  $10^{-4}$ \pers which are smaller than collisional rates ($10^{3}-10^{5}$ \pers) at high number density ($>10^{14}$ \percc). Since the collisional processes dominate the spontaneous emission rates, for simplicity, the label $coll. + Spont.$ will just be referred as $coll.$.\\
 
-\subsubsection{Radiative process (\texorpdfstring{$R_B$}{})}
+\subsubsection{Radiative process (\texorpdfstring{$R_B$}{R_B})}
 \label{subsec:ROSAA-simulation-rad}
 
 In the presence of radiation, the population is re-distributed again due to stimulated absorption ($B_{if}$) and emission ($B_{fi}$), described by the Einstein-B-coefficients. Both absorption and emission coefficients [m$^3$J$^{-1}$s$^{-2}$] can be derived from corresponding Einstein A-coefficient ($A_{fi}$):
@@ -94,7 +94,7 @@ Including the radiative process in Equation \ref{eqn:sim:spontaneous-lower} give
 \\
 
 % \textbf{Attachment process ($R_3$ and $R_{CID}$):} 
-\subsubsection{Attachment and dissociation process (\texorpdfstring{$R_3$ }{} and \texorpdfstring{$R_{CID}$}{} )}
+\subsubsection{Attachment and dissociation process (\texorpdfstring{$R_3$}{R_3} and \texorpdfstring{$R_{CID}$}{R_CID})}
 \label{subsec:ROSAA-simulation-att}
 
 The ternary association ($R_3$) and collision-induced dissociation ($R_{CID}$) rates [\pers] should also be included to complete the kinetic model scheme as shown in Figure \ref{fig:setup:ROSAA} (read Section \ref{subsec:rate-theory} for more detail on attachment process). The attachment process rates can be experimentally derived but only as a weighted average of all rotational population levels for a given molecular ion of interest (M$^+$). However, a rotational-specific rate is required for numerical simulation. The ratio of formation rate coefficients for the undergoing transitions is called $k_{3_1}$ ratio and will be referred to as \qt{$a$}:
