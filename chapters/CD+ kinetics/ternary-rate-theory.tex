@@ -1,0 +1,93 @@
+\section{Theory of association reactions}
+\label{subsec:rate-theory}
+
+The helium complex formation process is an association reaction treated here as an independent \qt{two-step} process. In this section, the equation for the overall effective binary association rate constant as described by \citet{gerlich_experimental_1992}, and \citet{bates_radiative_1988}  are simplified and derived as follows.\\
+
+Initially as the first step, the ion and neutral come together to form an excited intermediate complex: 
+
+% \[ \text{CD}^+ + \text{He} \xrightarrow{k_c} (\text{HeCD}^+) ^*\]
+\begin{equation}
+    \text{A}^+ + \text{B} \xrightarrow{k_c} (\text{AB}^+) ^*
+\end{equation}
+where $k_c$ is a bi-molecular rate constant for complex formation. The term complex indicates that it is a long-lived intermediate molecular ion with total internal energy above its dissociation limit and a lifetime of $\tau_{dis}$  towards dissociation::
+
+\begin{equation}
+    (\text{AB}^+) ^* \xrightarrow{k_{dis}} \text{A}^+ + \text{B}
+    \label{eqn:rate-theory:decay}
+\end{equation}
+where $k_{dis} = \frac{1}{\tau_{dis}}$ is a first-order rate for this back-dissociation process. Under most experimental conditions Eq. \ref{eqn:rate-theory:decay} dominates but a fraction of complexes are stabilized either via emitting a photon:
+
+\begin{equation}
+    (\text{AB}^+) ^* \xrightarrow{k_{rad}} \text{AB}^+ + hv
+    \label{eqn:rate-theory:via-hv}
+\end{equation}
+where $k_{rad}$ is a radiative rate \\
+
+or via stabilizing collision with a neutral reactant molecule B
+
+\begin{equation}
+    (\text{AB}^+) ^* + \text{B}\xrightarrow{k_{B}} \text{AB}^+ + \text{B}
+    \label{eqn:rate-theory:via-He}
+\end{equation}
+
+where $k_{B}$ is collisional stabilization rate constant with a neutral third body B and its rate is given by $\frac{1}{\tau_B} = k_{B}$ [B] .\\
+
+The overall association reaction can be summarised as 
+
+\[ \text{A}^+ + \text{B} \xrightarrow{k_{e}} \text{AB}^+ \]
+where $k_{e}$ is an overall second-order effective rate constant for the formation of AB$^+$ stable complex which can be described as follows (while substituting B = He, i.e., helium which is the neutral reaction partner used in this study)
+
+\begin{equation}
+    k_{e} = k_c \cdot \frac{k_{He}[He] + k_{rad}}{k_{dis} + k_{He}[He] + k_{rad}} 
+    \label{eqn:rate-theory:k*}
+\end{equation}
+
+where $[He]$ indicates helium number density [in \percc].\\
+
+Since as discussed in eq. \ref{eqn:rate-theory:decay}, $k_{dis}$ dominates over radiative and collisional stabilisation rates i.e., $k_{dis} >> k_{He}[He] + k_{rad}$, Eq. \ref{eqn:rate-theory:k*} can be simplified into the form of 
+\[ k_{e} = k_c \cdot \frac{k_{He}[He] + k_{rad}}{k_{dis}} \]
+
+which can be expressed in terms of ternary association ($k_3$) and bi-molecular radiative ($k_r$) rate constants 
+
+\begin{equation}
+    k_3 = k_c \cdot \frac{k_{He}}{k_{dis}}
+    \label{eqn:rate-theory:k3}
+\end{equation}
+
+\begin{equation}
+    k_r = k_c \cdot \frac{k_{rad}}{k_{dis}}
+    \label{eqn:rate-theory:kr}
+\end{equation}
+
+The final simplified overall effective binary rate constant ($k_{e}$) and rate ($R_{e}$) is expressed as:
+\begin{equation}
+    k_{e} = k_3[He] + k_r
+    \label{eqn:rate-theory:k*-simplified}
+\end{equation}
+
+\begin{equation}
+    R_{e} = k_{e}[He]
+    \label{eqn:rate-theory:R*-simplified}
+\end{equation}
+\\
+\textbf{Langevin rate coefficient:}\\
+For ion-neutral reactions, the Langevin rate coefficient, $k_L$, is a classical theoretical reaction rate coefficient given by \citet{langevin_notitle_1905}.  The final equation for $k_L$, with an ion of charge $q$ [in $C$], ion-neutral reduced mass $\mu$ [in amu] and polarizability of the neutral $\alpha$ [in $\mathring{\text{A}}^3$], summarised by \citet{asvany_numerical_2009} Appendix A, is given below
+\label{discussions:Langevin}
+
+\begin{equation}
+    \begin{split}
+        k_L [\text{cm}^3 / \text{s}] & = q \sqrt{\frac{\pi \alpha}{\epsilon _0 \mu}} \\
+        &= 2.342 \cdot \sqrt{ \frac{\alpha}{\mu}} \cdot 10^{-9} 
+   \end{split}
+   \label{eqn:Langevin}
+\end{equation}
+
+
+The Langevin rate coefficient, $k_L$, for the \CD + He reaction can be calculated from Eq. \ref{eqn:Langevin} by substituting helium polarizability, $\alpha=0.208\  \mathring{\text{A}}^3$ \cite{olney_absolute_1997} and He\CD pair reduced mass $\mu=3.11$ amu:
+
+\begin{equation}
+        k_L = 6 \cdot 10^{-10} \text{ cm}^3 / \text{s}.
+   \label{eqn:Langevin-CD+}
+\end{equation}
+
+\emph{NOTE}: The computed binding energy of He\CD, $D_e=491$ \wn\ at CCSD(T) /aug-cc-pVTZ level of theory. The binding energy is counterpoise corrected for the basis set superposition error \cite{boys_calculation_1970}.

@@ -1,0 +1,69 @@
+\section{Rate loss channels}
+\label{subsec:rate-loss-channels}
+\input{chapters/CD+ kinetics/figs/loss-channel}
+The ions are stored up to a maximum of 6 seconds, often this leads to a trap loss of stored ions \cite{mikosch_evaporation_2007, mikosch_evaporation_2008}. To include this loss channel, Eq. \ref{eqn:rate:parent-ion}, \ref{eqn:rate:n-1thcomplexes} and \ref{eqn:rate:nth-complexes} are modified into the following:
+
+\begin{equation}
+    \frac{d\cd^+}{dt} = \text{Eq. } \ref{eqn:rate:parent-ion} - R_{loss} \cdot \cd^+
+    \label{eqn:rate:modified:parent-ion}
+\end{equation}
+
+\begin{equation}
+    \frac{d\text{He}_{n-1}\cd^+}{dt} = \text{Eq. } \ref{eqn:rate:n-1thcomplexes} - R_{loss} \cdot \text{He}_{n-1}\cd^+
+    \label{eqn:rate:modified:n-1complexes}
+\end{equation}
+
+\begin{equation}
+    \frac{d\text{He}_{n}\cd^+}{dt} = \text{Eq. } \ref{eqn:rate:nth-complexes} - R_{loss} \cdot \text{He}_{n}\cd^+
+    \label{eqn:rate:modified:nth-complexes}
+\end{equation}
+
+where $R_{loss}$ indicates the trap loss rate [in \pers] . In addition to the
+$R_{loss}$ channel, we have noticed a growth of m/z=30, which has been seen
+even at a very low pressure where no higher order complexes except He\CD as
+shown in Figure \ref{fig:trap-and-m30-loss-channel-comparision}. Therefore,
+this channel is accounted for by adding an additional loss channel, as shown
+below:
+
+\begin{equation}
+    \frac{d\cd^+}{dt} = \text{Eq. } \ref{eqn:rate:modified:parent-ion} - R_{loss30} \cdot \cd^+
+    \label{eqn:rate:parent-ion-mass30-loss}
+\end{equation}
+
+The most probable candidate for m/z 30 is DCO$^+$, which could potentially form
+at low temperatures by the following reaction with CO$_2$ or H$_2$O neutrals
+(as shown for CH$^+$ isotope in KIDA database \cite{wakelam_2014_2015}):
+
+\begin{equation}
+    \cd^+ + \text{CO}_2 \xrightarrow{} \text{CO} + \text{DCO}^+
+    \label{eqn:mass-30-reaction-with-CO2}
+\end{equation}
+\begin{equation}
+    \cd^+ + \text{H$_2$O} \xrightarrow{} \text{H$_2$} + \text{DCO}^+
+    \label{eqn:mass-30-reaction-with-water}
+\end{equation}
+
+\begin{equation}
+    \frac{d\text{DCO}^+}{dt} = R_{loss30} \cdot \cd^+
+    \label{eqn:rate:mass-30-formation}
+\end{equation}
+
+Since the m/z 30 also corresponds to the He$_4$\CD complex, Eq.
+\ref{eqn:rate:modified:n-1complexes} is modified only when $n-1=4$ (or Eq.
+\ref{eqn:rate:modified:nth-complexes} when $n=4$) by adding the corresponding
+loss channel \(R_{loss30} \cdot \cd^+\) as shown below:
+
+\begin{equation}
+    \frac{d(\text{He}_4\cd^+ + \text{DCO}^+)}{dt} = (\text{Eq. } \ref{eqn:rate:modified:n-1complexes} \text{ or } \ref{eqn:rate:modified:nth-complexes}) + R_{loss30} \cdot \cd^+
+    \label{eqn:rate:mass-30-correction}
+\end{equation}
+
+The coupled ordinary differential equations for parent ion \CD (Eq.
+\ref{eqn:rate:parent-ion}, \ref{eqn:rate:modified:parent-ion} or
+\ref{eqn:rate:parent-ion-mass30-loss}) and the formed complexes (Eq.
+\ref{eqn:rate:n-1thcomplexes}, \ref{eqn:rate:nth-complexes} or
+\ref{eqn:rate:mass-30-correction}) are used to numerically simulate and fit the
+experimentally observed data to determine the rate constants, which is
+discussed in more detail in the next section in different aspects. This process
+is vital for understanding the ROSAA spectroscopic technique employed in this
+work.

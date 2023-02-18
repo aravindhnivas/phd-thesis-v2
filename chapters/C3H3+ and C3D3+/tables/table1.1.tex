@@ -1,0 +1,87 @@
+\clearpage
+% \begin{landscape}
+\begin{ThreePartTable}
+    \small
+    \begin{TableNotes}\footnotesize
+        \item [a] Frequencies (error in parenthesis). nc indicates not-covered and hyphen $-$ indicates not observed.\\
+        \item [b] Measured with OPO/OPA system. The remaining bands are measured with the FELIX free electron laser.\\
+        \item [c] Ref. \citep{GLY2012} - Velocity-map imaging photo-electron method.\\
+        \item [d] Ref. \citep{Chin2018} -Direct IR absorption spectra of \lin in solid Ar matrix.\\
+        \item [t] Tentative assignment.\\
+        \item [*] Ref. \citep{RDS2010}.\\
+     \end{TableNotes}
+    \begin{longtable}{*{16}{c}}
+
+        \caption{Summary of IRPD experimental vibrational band position of Ne-\iso compared to computed fundamental, overtone and combination band frequencies at the CCSD(T)/ANO2 level of theory combined with anharmonic corrections from CCSD(T)/ANO1 (for \lin) and CCSD(T)/ANO0 (for \cyc).}\label{tbl1}\\
+        
+        \toprule
+        Mode & Ne-IRPD\tnote{a} & FWHM & Calc. [Int.]& Ar-IRPD & VMI-PE\tnote{c} & Ar-Matrix\tnote{d}\\
+        & (this work)&\wn&\wn [Km/mol]& \wn& \wn& \wn\\
+        
+        \midrule
+        \endfirsthead
+        \\\\\hline \multicolumn{8}{c}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+        \toprule
+        Mode & Ne-IRPD\tnote{a} & FWHM & Calc. [Int.]& Ar-IRPD & VMI-PE\tnote{c} & Ar-Matrix\tnote{d}\\
+        & (this work)&\wn&\wn [Km/mol]& \wn& \wn& \wn\\
+    
+        \toprule
+        \endhead
+    
+        \midrule
+        \insertTableNotes
+        \\\\\hline \multicolumn{8}{c}{{\bfseries \tablename\ \thetable{} -- continued on next page}} \\ \hline
+        \endfoot
+        \bottomrule
+        % \insertTableNotes
+        \endlastfoot
+        
+    
+        \cyc & & & \\\\
+        $\nu_{1}(a^{'}_1)$   &    -           & -  & 3179 [0]  & -    \\
+        $\nu_{2}(a^{'}_1)$   &    -           & -  & 1610 [0]  & -    \\
+        $\nu_{3}(a^{'}_2)$   &    -           & -  & 1024 [0]  & -    \\
+        $\nu_{4}(e^{'})$     & 3133(1)\tnote{b}  & 14 & 3127 [189] & 3182 \\
+        $\nu_{5}(e^{'})$     & 1293(1)        & 25 & 1284 [88] & 1293 \\
+        $\nu_{6}(e^{'})$     & 927(1)         & 19 & 925 [60]  & nc   \\
+        $\nu_{7}(a^{''}_2)$  & 757(1)         & 20 & 754 [70]  & nc   \\
+        $\nu_{8}(e^{''})$    &    -           & -  & 1000 [0]  & -    \\
+        \\
+        $\nu_{7}$+$\nu_{8}(e^{'})$ & - & - & 1739 [1]  &      &          &          \\
+        $\nu_{3}$+$\nu_{6}(e^{'})$ & - & - & 1921 [2]  &      &          &          \\\\
+        \midrule
+        
+        \lin &&&&& \\\\
+        
+        %&----------- fundamental ------------\\
+        $\nu_{1}(a_1)$                & -           & -  & 3230 [102] & 3238 &          & 3195.3   \\
+        $\nu_{2}(a_1)$                & 3003(1)\tnote{b, t} & 9  & 2997 [26]  & 3004 &          & 3000.6   \\
+        $\nu_{3}(a_1)$                & 2078(1)     & 32 & 2078 [346] & 2077 & 2086(15) & 2075.2   \\
+        $\nu_{4}(a_1)$                & 1445(1)     & 12 & 1444 [12]  & 1445 &          & 1433.2   \\
+              
+        $\nu_{5}(a_1)$                & 1138(4)     & 31 & 1109 [2]   & 1222 & 1120(15) & 1140     \\
+        $\nu_{6}(b_1)$                & 1138(4)     & 31 & 1100 [11]  & 1111 &          & 1105.2   \\
+        $\nu_{7}(b_1)$                & 856(1)      & 44 & 875 [7]    & nc   & 858(15)  &          \\
+        $\nu_{8}(b_1)$                & nc          & nc & 263 [26]   & nc   &          &          \\
+        $\nu_{9}(b_2)$                &3041(1)\tnote{b, t}  & 9  & 3087 [37]  & 3093 &          & 3063.4   \\
+        $\nu_{10}(b_2)$               & -           &  - & 1016 [2]   & -    &          &          \\
+        $\nu_{11}(b_2)$               & 610(1)      & 12 & 618 [56]   & nc   &          & 606.8    \\
+        $\nu_{12}(b_2)$               & nc          & nc & 299 [15]   & nc   &          &          \\\\
+     
+        %&----------- combination ------------\\
+        $\nu_{3}$+$\nu_{5}(a_1)$      & -          &  - & 3168 [7]   &      &          &   \\
+        $\nu_{3}$+$\nu_{10}(b_2)$     & -          &  - & 3086 [4]   &      &          &   \\
+        $\nu_{4}$+$\nu_{10}(b_2)$     & -          &  - & 2444 [2]   &      &          &   \\
+        $\nu_{7}$+$\nu_{8}(a_1)$      & 1138(4)    & 31 & 1154 [50]  &      &          &   \\\\
+        
+        %&----------- overtone ------------\\
+        $2\nu_{4}(a_1)$               &  -          & -  & 2865 [1]   &      &          &   \\
+        $2\nu_{5}(a_1)$               &  -          & -  & 2211 [9]   &      & 2247(15) &   \\
+        $2\nu_{7}(a_1)$               &  -          & -  & 1741 [10]  &      & 1744(15) &   \\
+        $2\nu_{10}(a_1)$              &             & 27 & 2027 [7]   &      &          &   \\
+        $2\nu_{11}(a_1)$              & 1222(1)     & 27 & 1224 [7]   &      &          &   \\\\
+
+    \end{longtable}
+\end{ThreePartTable}
+% \end{landscape}
+% \clearpage

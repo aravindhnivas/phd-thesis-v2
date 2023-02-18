@@ -1,0 +1,107 @@
+\documentclass[fourier]{_style/dissertation}
+
+% \includeonly{introduction/introduction}
+% words which latex does not know how to hyphenate can be listed here:
+% \hyphenation{ge-for-der-te sus-pen-dier-ten}
+\input{lib/index.tex}
+% \addbibresource[glob]{*.bib}
+
+%% Specify the title and author of the thesis. This information will be used on
+%% the title page (in title/title.tex) and in the metadata of the final PDF.
+\title{Rotational and vibrational action spectroscopic studies on cold molecular ions}
+\author{Aravindh Nivas}{Marimuthu}
+
+\begin{document}
+%% Use Roman numerals for the page numbers of the title pages and table of
+%% contents.
+\frontmatter
+
+\include{title/title}
+
+%% The (optional) dedication can be used to thank someone or display a
+%% significant quotation.
+\dedication{\epigraph{Einsteins work is to make physics more philosophical (in a good sense).}{Hendrik Antoon Lorentz}}
+
+{
+  \cleardoublepage%
+  \phantomsection%
+
+  \pdfbookmark[1]{\contentsname}{toc}
+  \tableofcontents
+
+  \cleardoublepage%
+  \phantomsection%
+
+  \pdfbookmark[1]{\listfigurename}{List of Figures}
+  \listoffigures
+
+  \cleardoublepage%
+  \phantomsection%
+  
+  \pdfbookmark[1]{\listtablename}{List of Tables}
+  \listoftables
+}
+
+% \include{summary/summary}
+% \include{preface/preface}
+
+%% Use Arabic numerals for the page numbers of the chapters; turn on thumb indices.
+\mainmatter
+% \include{introduction/introduction}
+% \include{conclusion/conclusion}
+
+
+\part{Introduction and methods}
+\chapter{Introduction}\label{chapter:intro}
+\include{chapters/Introduction/index}
+
+\chapter{Experimental and theoretical methods}\label{chapter:methods}
+\include{chapters/technical-details/index}
+
+\part{Vibrational spectroscopy}
+\input{chapters/C3H3+ and C3D3+/c3h3+_chapter.tex}
+\input{chapters/CH3CNH+/ch3cnh+_chapter.tex}
+\input{chapters/HC3N+/hc3n+_chapter.tex}
+
+\part{Rotational spectroscopy}
+\input{chapters/CD+ kinetics/cd+_chapter.tex}
+\input{chapters/CO+_ROSAA_paper/co+_chapter.tex}
+
+% \printbibliography[heading=bibintoc]
+
+%% Use letters for the chapter numbers of the appendices.
+\appendix
+\cleardoublepage%
+\phantomsection%
+\addcontentsline{toc}{part}{Appendices}
+\part*{Appendices}
+\chapter{Chapter 3}
+\include{chapters/C3H3+ and C3D3+/Supplement/c3h3+_suppl.tex}
+
+\chapter{Chapter 4}
+\include{chapters/CH3CNH+/Supplement/CH3CNH+_supp_v2.tex}
+
+\chapter{Chapter 5}
+\include{chapters/HC3N+/SI.tex}
+
+\chapter{Chapter 6}
+\include{chapters/CD+ kinetics/Appendix}
+
+\chapter{Chapter 7}
+\include{chapters/CO+_ROSAA_paper/SI/supplimentary.tex}
+
+\bookmarksetup{startatroot}% this is it
+\addtocontents{toc}{\bigskip}% perhaps as well
+
+\printbibliography[heading=bibintoc]
+
+%% Turn off thumb indices for unnumbered chapters.
+\backmatter
+
+\include{summary/index.tex}
+\include{acknowledgements/acknowledgements}
+\include{publications/publications}
+\include{cv/cv}
+
+\end{document}
+

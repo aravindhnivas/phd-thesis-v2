@@ -1,0 +1,63 @@
+\subsection{Determining the collisional ion temperature}
+\label{subsec:collisional-ion-temperature}
+
+In the spectroscopic experiment to investigate pure rotational transitions, the ions are cooled down in the trap by collisions with a buffer gas atom such as He, Ne or He:Ne mixture. The collisional ion temperature (T$_{\text{coll}}$), i.e., translational or kinetic temperature of the ions in the trap, which corresponds to mean collisional energy between the partners, thus the neutral buffer gas and the molecular ion, is an important factor to be determined especially for the models described in Section \ref{subsec:ROSAA-simulation} . This temperature cannot be measured directly but can be estimated by:
+
+\begin{equation}
+    \text{T}_{\text{coll}} = \frac{\text{m}_\text{He} \cdot \text{T}_{\text{ion}}  + \text{m}_\text{ion} \cdot \text{T}_{\text{He}} }{\text{m}_\text{He} + \text{m}_\text{ion}}
+    \label{eqn:Tcoll}
+\end{equation}
+
+where \qt{m} is mass and \qt{T} is temperature, and the subscript \qt{He} and \qt{ion} indicates the corresponding buffer gas atom used (helium in this case) and the molecular ion of interest, respectively. The nominal trap temperature measured is assumed to be T$_{\text{He}}$. However, it has to be noted that the ion temperature (T$_{\text{ion}}$) is often higher than the nominal trap temperature \cite{endres_incomplete_2017}. Furthermore, T$_{\text{ion}}$ can be measured via the Doppler width estimated from the recorded full-width half maxima (FWHM) of a rotational transition at a given power. The measured rotational line profile corresponds to the Voigt profile, which is a convolution of a Gaussian profile (due to the kinetic energy distribution of the ions) and a Lorentzian profile (caused by power broadening). The FWHM of the Gaussian ($f_G$) and Lorentzian ($f_L$) profile can be derived as follows:
+
+
+\begin{equation}
+    f_G = \nu \cdot \sqrt{\frac{8 \cdot \text{k}_b \cdot \text{T}_{ion} \cdot \text{ln}(2)}{\text{m}_{ion} \cdot c^2}} = \text{C}_G \cdot \sqrt{\text{T}_{ion}}
+    \label{eqn:fG}
+\end{equation}
+
+where $\nu$ corresponds to the central line frequency of the profile and C$_G$ is the Doppler proportionality constant, and by:
+
+\[ f_L = \frac{\sqrt{2}}{2 \cdot \pi} \cdot \Omega _R \]
+substituting angular Rabi frequency of the transition, which is defined as, $\Omega _R$ = \( \frac{\mu \cdot \text{E}}{\hbar} \) \footnote{$\mu$ is transition dipole moment, and E is the electric field, hence dividing the energy term $(\mu \cdot \text{E})$ by $\hbar$ gives angular frequency}, we get
+
+\[ f_L = \frac{\sqrt{2}}{2 \cdot \pi} \cdot \frac{\mu \cdot \text{E}}{\hbar} \]
+
+Substituting electric field strength, 
+\( \text{E} = \sqrt{\frac{2\cdot I}{c \cdot \epsilon _0}} \)
+where \emph{I} is the intrinsic intensity 
+\( I = \frac{1}{2} \cdot c \cdot \epsilon _0 \cdot \text{E}^2 = \frac{P}{A_{trap}} \), 
+we get the final expression for Lorentian FWHM, f$_L$:
+
+\begin{equation}
+    f_L = \frac{2\cdot \mu}{h} \sqrt{\frac{P}{A_{trap} \cdot c \cdot \epsilon _0 }} = C_P \cdot \sqrt{P}
+    \label{eqn:fL}
+\end{equation}
+where \emph{P} is the output radiation power in W, $A_{trap} = 5 \cdot 10^{-5} $cm$^2$ is the trap area and $C_P$ is a power-broadening proportionality constant.\\
+
+The Voigt profile is given by: 
+\begin{equation}
+    V(x; \sigma, \gamma) = \frac{Re[w(z)]}{\sigma \sqrt{2\pi}}
+    \label{eqn:VoigtProfile}
+\end{equation}
+
+where $\sigma$ is the standard deviation in Gaussian profile, $\gamma$ is the half-width half maxima of Lorentzian profile and $Re[w(z)]$ is the real part of the Faddeeva function.
+
+\begin{equation}
+    \sigma = \frac{f_G}{2\sqrt{2\cdot ln(2)}}
+    \label{eqn:fG-sigma}
+\end{equation}
+\begin{equation}
+    \gamma = \frac{f_L}{2}
+    \label{eqn:fL-gamma}
+\end{equation}
+\[ z = \frac{x + i\gamma}{\sigma \sqrt{2}} \]
+
+The FWHM of Voigt profile can be approximated  with an accuracy of 0.02\% by \cite{olivero_empirical_1977}:
+
+\begin{equation}
+    f_V = 0.5346 \cdot f_L + \sqrt{0.2166 \cdot f_L^2 + f_G^2}
+    \label{eqn:fV}
+\end{equation}
+
+To determine T$_{\text{ion}}$, the experimentally measured rotational spectrum is fitted with the Voigt profile (Eq. \ref{eqn:VoigtProfile}); subsequently, line parameters $\sigma$ and $\gamma$ are obtained. Using $\sigma$, one can compute $f_G$ using Eq. \ref{eqn:fG-sigma} and finally, T$_{\text{ion}}$ from $f_G$ using Eq. \ref{eqn:fG}.

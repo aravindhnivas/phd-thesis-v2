@@ -1,0 +1,56 @@
+\section{Rate equations}
+\label{subsec:rate-equations}
+
+Following the theory of ternary association processes as discussed in Section \ref{subsec:rate-theory}. The pathway for the three-body reaction \CD + 2He is expressed as shown below:
+
+\begin{equation}
+    \OverUnder[1]{\cd^+ + 2\he}{\he\cd^+ + \he}
+    \label{eqn:pathway:first-complex}
+\end{equation}
+
+the first complex \emph{i.e.} He\CD acts as the source for the formation of higher-order complexes ($n > 1$).
+The pathway for higher-order complexes is expressed as:
+
+\begin{equation}
+    \OverUnder[n]{\HenCD[n-1] + 2\he}{\HenCD[n] + \he}
+    \label{eqn:pathway:nth-complex}
+\end{equation}
+
+The effective binary complex formation and collision-induced dissociation rates (in \pers) are labelled as $R_{e_n}$ and $R_{CID}$, respectively. The $R_{e}$ is given by eq. \ref{eqn:rate-theory:R*-simplified} and $R_{CID_n}$ can be expressed in terms of rate constants $k_{CID_n}$ and number density $[He]$ as below:
+
+\begin{equation}
+    R_{CID} = k_{CID} \cdot [He]
+    \label{eqn:rate:rcid}
+\end{equation}
+
+The corresponding rate equation for Eq. \ref{eqn:pathway:first-complex} and \ref{eqn:pathway:nth-complex} are then given as:
+
+\begin{equation}
+    \frac{d\cd^+}{dt} = -R_{e_1} \cdot \cd^+ + R_{CID_1} \cdot \he\cd^+
+    \label{eqn:rate:parent-ion}
+\end{equation}
+
+\begin{equation*}
+    \begin{split}
+        \frac{d\he\cd^+}{dt} = & +R_{e_1} \cdot \cd^+ - R_{CID_1} \cdot \he\cd^+ \\
+        & -R_{e_2} \cdot \he\cd^+ + R_{CID_2} \cdot \he_2\cd^+
+    \end{split}
+\end{equation*}
+
+A general equation for all $(n-1)^{th}$ complex can be expressed as:
+
+\begin{equation}
+    \begin{split}
+        \frac{d\he_{n-1}\cd^+}{dt} = & +R_{e_{n-1}} \cdot \he_{n-2}\cd^+ - R_{CID_{n-1}} \cdot \he_{n-1}\cd^+ \\
+        & -R_{e_n} \cdot \he_{n-1}\cd^+ + R_{CID_n} \cdot \he_n\cd^+
+    \end{split}
+    \label{eqn:rate:n-1thcomplexes}
+\end{equation}
+
+The complex with the highest observed number $n$ of attached He, i.e., He$_n$\CD in this system is treated as a reservoir for all possible higher order complexes, and its rate equation is given as:
+% But for the $n^{th}$ complex \emph{i.e.} He$_n$\CD in this system which acts as a reservoir for all higher order complexes is given as:
+
+\begin{equation}
+    \frac{d\he_{n}\cd^+}{dt} = R_{e_n} \cdot \he_{n-1}\cd^+ - R_{CID_n} \cdot \he_{n}\cd^+
+    \label{eqn:rate:nth-complexes}
+\end{equation}

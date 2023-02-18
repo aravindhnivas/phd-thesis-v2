@@ -1,0 +1,92 @@
+\section{Theoretical methods}
+\label{sec:theory}
+
+In this study, the vibrational and rotational spectroscopic investigations are
+supported and complemented by quantum chemical calculations. Therefore, this
+section briefly describes the quantum theory of molecular vibration and
+rotation using a quantum mechanical approach.\\
+
+In classical mechanics, the system's total energy, which includes kinetic ($T$)
+and potential ($V$) energy, is known as the Hamiltonian ($H$), such that
+
+\begin{equation}
+    \label{eqn:classical:Hamiltonian}
+    H = T + V
+\end{equation}
+
+Schr\"odinger postulated the form of Hamiltonian (operator) in quantum
+mechanics, as given below
+
+\begin{equation}
+    \label{eqn:quantum:Hamiltonian}
+    H = - \frac{\hbar^2}{2m} \nabla^2 + V(r)
+\end{equation}
+
+where $m$ is mass, $r$ represent the coordinates, $\nabla^2$ is the Laplacian
+operate, and the corresponding Schr\"odinger wave equation using $\psi$, the
+wavefunction of the quantum state:
+
+\begin{equation}
+    \label{eqn:quantum:simple-Hamiltonian}
+    H\psi(r, t) = i \hbar \frac{\partial \psi(r, t)}{\partial t}
+\end{equation}
+
+One can derive a final time-independent Schor\"odinger equation by substituting
+Eq. \ref{eqn:quantum:Hamiltonian} in Eq. \ref{eqn:quantum:simple-Hamiltonian}
+
+\begin{equation}
+    \label{eqn:quantum:wave-eqn}
+    H\psi(r) = E\psi(r)
+\end{equation}
+
+where $E$ is the eigenvalue of operator $H$, corresponding to the system's
+total energy.\\
+
+In quantum mechanics, any molecular state can be fully described by a number of
+different degrees of freedom, each of which has a corresponding coordinate
+system. In three dimensions, there is the rotational and vibrational motion of
+the nuclei and the motion of the electrons. Nuclear and electron spin variables
+could also exist.\\
+
+A fundamental idea underlying the description of the quantum states of
+molecules is the Born-Oppenheimer (BO) approximation \cite{born_zur_1927},
+i.e., the nuclei's ($N$) motion and electrons' motion can be separated since
+nuclei are much heavier than the electrons. Under BO approximation, the total
+wavefunction ($\psi$) of the molecular system is separable into nuclear
+($\psi_n$) and electronic ($\psi_e$) parts, that is
+
+\begin{equation*}
+    \psi = \psi_n (R) \psi_{e}(r, R)
+\end{equation*}
+
+where $R$ represents an inter-nuclear separation coordinate for each pair of
+atoms and $r$ represents the internal coordinates.
+
+The wave function $\psi_N$ can be further factorized into a vibrational
+($\psi_v$) and rotational ($\psi_r$) part:
+
+\begin{equation*}
+    \psi_n = \psi_v \psi_{r}
+\end{equation*}
+
+so that
+\[ \psi = \psi_v \psi_{r} \psi_{e} \]
+
+The total energy ($E$) of the system corresponds to the sum of the
+contributions from vibrational, rotational and electronic parts, as given
+below:
+
+\begin{equation*}
+    E =  E_{v} + E_{r} + E_{e}
+\end{equation*}
+
+If the molecule possesses net nuclear or electron spin, it is added and
+factorised to $E$ and $\psi$, respectively.
+
+However, the BO approximation does not hold true in all cases. For example, the
+coupling between electronic and vibrational modes (Renner-Teller effect,
+vibronic coupling) is observed for open-shell linear molecular systems (see
+chapter \ref{chapter:HC3N+} for treatment of this case).
+\input{chapters/technical-details/theory/vibration.tex}
+\input{chapters/technical-details/theory/rotation.tex}
+\input{chapters/technical-details/theory/calculations.tex}

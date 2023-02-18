@@ -1,0 +1,162 @@
+\section{Influence of radiation}
+\label{subsec:rate-constants-laserOn}
+
+Following the main motivation of this chapter (Section
+\ref{sec:CD+-kinetics-motivation}), in this section, the \CD + He reaction
+kinetics under the influence of radiation (\CD, $J=0-1$ transition) will be
+discussed.
+
+The measurement of the pure rotational, $J=0-1$ line of \CD has been previously
+studied by employing the ROSAA action spectroscopic method and numerical
+simulations \cite{kluge_state-selective_2016, Brunken2017}. In this study, an
+improved numerical simulation model has been implemented (see Section
+\ref{subsec:ROSAA-simulation}) that employs the numerically stable implicit
+Runge-Kutta ODE solver for stiff equations instead of explicit Euler approach,
+\CD + He collisional rate coefficients \cite{Werfelli2017} instead of derived
+rate coefficients from the CH$^+$ + He reaction, and that includes spontaneous
+emission on all involved energy states. As a result, a more adaptable program
+has been developed for the general-purpose numerical kinetic model with an
+easy-to-use graphical user interface. Additionally, the \CD, \CDline rotational
+transition is measured using neon atoms as collision and association partner,
+allowing the use of a higher temperature range (up to 14 K) which shows us the
+possibility of using Ne atoms for ROSAA measurement of energetically
+higher-lying rotational transitions.
+
+\subsection{CD\texorpdfstring{$^+$ }\ rotational transition (\texorpdfstring{$J=0-1$}\ )}
+\label{subsec:CD+-spectroscopy}
+
+\input{chapters/CD+ kinetics/figs/figure_thz_spectrum}
+
+\begin{table}[!htb]
+    \centering
+    \caption{Pure-rotational \CDline transition frequency of \CD ion using ROSAA action spectroscopy with He tag at 4.5(3) and 5.6(2) K temperature, and $ 35 \sim \mu$W power.}
+    \begin{tabular}{rrrrr}
+        \hline                                                                       \\
+        T$_{trap}$ & Number density           & Frequency      & Depletion & FWHM    \\
+        K          & $\times 10 ^{14}$ \percc & MHz            & \%        & kHz     \\
+        \\\hline\hline\\
+        4.5(3)     & 2.2(3)                   & 453521.852(05) & 25.56(60) & 420(11) \\
+        4.5(3)     & 2.7(4)                   & 453521.856(05) & 24.79(61) & 406(12) \\
+        4.5(3)     & 5.7(7)                   & 453521.849(05) & 24.49(66) & 397(12) \\
+        5.6(2)     & 6.3(9)                   & 453521.849(13) & 13.19(90) & 384(30) \\
+        \\\hline\hline\\
+    \end{tabular}
+    \label{tab:CD+_He}
+\end{table}
+
+Figure \ref{fig:thz} shows the measured \CD rotational spectrum using both He-
+and Ne- for the ROSAA method fitted with various lineshapes such as Gaussian,
+Lorentz and Voigt. The experiment is repeated with various temperatures and
+over large pressure ranges as summarized in Table \ref{tab:CD+_He} and
+\ref{tab:CD+_Ne} with fitted parameters such as central transition frequency,
+signal intensity (He\CD depletion \%) and full-width half maxima (FWHM). The
+measured $J=0-1$ transition frequency fitted with a Voigt profile line shape is
+453521.852(5) MHz via He-ROSAA and 453521.853(5) MHz via Ne-ROSAA,
+respectively, and agrees well within the respective error bars, with each other
+and with the previous literature value 453521.8509(7) and 453521.8530(6) MHz
+via He-ROSAA by \citet{Brunken2017} and \citet{domenech_first_2018},
+respectively; and via glow discharge experiment 453521.851(20) MHz by
+\citet{amano_j_2010}.
+
+% \input{chapters/CD+ kinetics/tables/table_thz}
+\begin{table}[!htb]
+    \centering
+    \caption{Pure-rotational \CDline transition frequency of \CD ion using ROSAA action spectroscopy with Ne tag for temperature range 5-14 K, and $35 \sim \mu$W power.}
+    \begin{tabular}{rrrrr}
+        \hline                                                                        \\
+        T$_{trap}$ & Number density           & Frequency      & Depletion & FWHM     \\
+        K          & $\times 10 ^{14}$ \percc & MHz            & \%        & kHz      \\
+        \\\hline\hline\\
+        16         & 1.9(2)                   & 453521.908(35) & 11(2)     & 455(083) \\
+        16         & 1.9(2)                   & 453521.845(63) & 6(1)      & 563(148) \\
+        14         & 1.5(2)                   & 453521.872(26) & 14(1)     & 610(060) \\
+        8.7        & 1.2(2)                   & 453521.843(33) & 19(4)     & 355(078) \\
+        8.7        & 1.8(2)                   & 453521.848(6)  & 22(1)     & 446(014) \\
+        8.7        & 1.5(2)                   & 453521.847(9)  & 24(1)     & 448(022) \\
+        9          & 3.8(5)                   & 453521.828(26) & 14(3)     & 253(060) \\
+        9          & 2.0(3)                   & 453521.858(9)  & 19(1)     & 390(021) \\
+        5.5        & 8(1)                     & 453521.852(26) & 12(3)     & 204(061) \\
+        6          & 1.0(1)                   & 453521.845(28) & 19(2)     & 414(065) \\
+        \\\hline\hline\\
+    \end{tabular}
+
+    \label{tab:CD+_Ne}
+\end{table}
+
+\subsection{Determining ion temperature}
+\label{subsec:CD+-Tion}
+
+The ion temperature (T$_{ion}$) can be determined from a measured line profile
+fitted with a Voigt lineshape (see Section
+\ref{subsec:collisional-ion-temperature} for detail). Figure \ref{fig:Tcoll}
+shows the plot comparing measured nominal trap temperature, T$_{trap}$ and
+derived T$_{ion}$ for \CD, from Table \ref{tab:CD+_He} and \ref{tab:CD+_Ne}.
+The plot is compared with the previously determined values in the FELion
+instrument by \citet{kluge_state-selective_2016}. This confirms that the ion
+temperature is higher than the nominal trap temperatures, as observed
+previously in the 22-pole ion trap \cite{asvany_numerical_2009,
+    otto_internal_2013, endres_incomplete_2017}. For T$_{trap} < 5$ and $>5$ K, the
+corresponding T$_{ion}$ are derived from He-ROSAA and Ne-ROSAA measurements,
+respectively.
+
+\input{chapters/CD+ kinetics/figs/figure_deriving_Tcoll}
+Our measured \Tion data lies higher than the previous literature data (see Figure \ref{fig:Tcoll}). However, different experimental conditions could explain this difference. Since, as discussed by \citet{endres_incomplete_2017}, various factors such as RF heating, buffer gas thermalisation with trap walls, black-body radiation from surrounding room temperature vacuum chamber, and collision with warm residual gas that enter the cryogenic trap, in principle, can influence the ion temperature.
+
+The measurements are performed at $\sim 35\ \mu$W for \CD $J=0-1$ transition.
+% Similar to deriving T$_{ion}$, one could also derive the power from the Lorentzian parameters using equation \ref{eqn:fL}. However, as depicted in Figure \ref{fig:thz}, the Gaussian part dominates and, thus, the Lorentzian parameters and, subsequently, the power could not be determined within reasonable error limits. 
+The \Tion dependency for \CD ion, of ion-to-buffer gas mass ratio, i.e., for He
+and Ne, could not be determined in this study. However,
+\citet{endres_incomplete_2017} showed that for OH$^-$, the \Tion is independent
+of the ion-to-buffer gas mass ratio using He and HD. The number density
+investigated in the range $(2-6) \cdot 10^{14}$ \percc\ around 5 K temperature
+for helium (see Table \ref{tab:CD+_He}) did not influence the derived T$_{ion}$
+within the error limits.
+
+The effective collisional temperature, i.e., T$_{coll}$, is derived from \Ttrap
+and \Tion using equation \ref{eqn:Tcoll}. In detail, the following sections
+investigate the kinetic measurement in the presence of radiation and ROSAA
+simulations at a given collisional temperature.
+
+\subsection{Kinetics}
+\label{subsec:CD+-kinetics}
+
+The measured formation rate constants ($k_3$) in kinetic experiments are a
+weighted averaged rate coefficient over the thermal population of rotational
+levels ($J$) at a given collisional temperature (T$_{coll}$). The rotational
+state-specific ternary rate constants ($k_{3_1}$) for the first attachment
+process can be written as
+
+\begin{equation}
+    k_{3_1} (T_{coll}) = \frac{\sum_{J} k_{3_1} (J, \text{T}_{coll}) \cdot N_{\text{CD}^+ (J)} }{N_{\text{CD}^+}}
+    \label{eqn:rate-constant-weighted}
+\end{equation}
+
+where $N_{\text{CD}^+ (J)}$ and $N_{\text{CD}^+}$ indicates the fraction of
+thermal population at specific rotational $J$ level and total population of \CD
+ion, respectively.\\ \input{chapters/CD+
+    kinetics/figs/on-rate-constant_1-funcOf_nHe}
+
+Figure \ref{fig:on:effective-and-ternary} shows the He\CD formation rate
+coefficient as described in equation \ref{eqn:rate-constant-weighted}. The
+formation rate coefficients ($k_{3_1}$) for the first complex (He\CD) at
+T$_{coll}=7(1)$ K, measured with and without the presence of radiation resonant
+with $J=0-1$ transition of \CD ion. It is denoted by $k_{3_1}(ON)$ and
+$k_{3_1}(OFF)$, respectively and as shown in Figure
+\ref{fig:off:rate-constants} and \ref{fig:on:rate-constants}, they are derived
+and given by:
+
+\begin{align}
+    \label{eqn:k-on-off}
+    \begin{split}
+        k_{3_1}(OFF) &= 1.1(1) \cdot 10^{-30} \text{ cm}^6/\text{s}\\
+        k_{3_1}(ON) &= 8.4(1.8) \cdot 10^{-31} \text{ cm}^6/\text{s}
+    \end{split}
+\end{align}
+
+Following the discussion from Section \ref{subsec:ROSAA-simulation}, the
+state-dependent formation rate constant is the key factor in understanding the
+ROSAA process and, subsequently, its signal intensity (referred to as depletion
+counts [\%] in Figure \ref{fig:thz}). The next section discusses this
+relationship in detail with numerical simulations.
+
+\input{chapters/CD+ kinetics/simulations/index}

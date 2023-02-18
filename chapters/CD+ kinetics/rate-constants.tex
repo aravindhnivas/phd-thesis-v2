@@ -1,0 +1,60 @@
+\section{Deriving rate constants}
+\label{subsec:rate-constants}
+
+In the experiment, the parent ion \CD and He$_n$CD$^+$ complexes count are
+monitored as a function of trap time (in the following, it will be referred to
+as \qt{kinetics scan}) where all ions are monitored for a duration of up to 6
+s, with 4-5 iterations per data point, as shown in Figure
+\ref{fig:fit:rate-constants}. The coupled ordinary differential (ODE) rate
+equations, as discussed in section \ref{subsec:rate-equations} and
+\ref{subsec:rate-loss-channels}, are solved using the implicit Runge-Kutta
+method of the Radau IIA family of order 5 \cite{hairer_implementation_1996},
+and the solution is numerically fitted to the measured data using
+Levenberg-Marquardt algorithm also known as damped least-squares (DLS) method
+(as shown as solid lines in Figure \ref{fig:fit:rate-constants}) to derive the
+rates [\pers] $R_e$ and $R_{CID}$. These computations are carried out using the
+SciPy library \cite{virtanen_scipy_2020}. The corresponding rate coefficients
+are derived from the rates as described in equations
+\ref{eqn:rate-theory:R*-simplified} and \ref{eqn:rate:rcid}.
+
+\input{chapters/CD+ kinetics/figs/rate-constants-fitting}
+\input{chapters/CD+ kinetics/figs/off-rate-constant_1-funcOf_nHe}
+
+Figure \ref{fig:off:effective-rate-constants} shows the exemplary derived
+effective binary rate constant $k_e$ plotted against the Helium number density
+    [He] to determine the ternary association rate constant ($k_3$) and radiative
+rate ($k_r$) using Eq.\ref{eqn:rate-theory:k*-simplified} at 4.8(3) K
+temperature. The radiative rate, $k_r=1.2(1.9) \cdot 10^{-17}$ could not be
+determined, and the derived error margin can be viewed as an upper limit to
+this value. . Thus, one can simplify the equation
+\ref{eqn:rate-theory:R*-simplified} such that $k_3[He] >> k_r$ then:
+
+\begin{equation}
+    R_e = k_e[He] = k_3[He]^2
+    % k_3 = \frac{R_e}{[He]^2}
+    \label{eqn:rate-theory:k*-further-simplified}
+\end{equation}
+
+\input{chapters/CD+ kinetics/tables/rate-constants}
+\input{chapters/CD+ kinetics/figs/rate-constants-higher-order}
+
+Figure \ref{fig:off:rate-constants} and \ref{fig:rate-constants-higher-order}
+shows the derived ternary association rate constant ($k_3$) at a nominal trap
+temperature of 4.8(3) K using equation
+\ref{eqn:rate-theory:k*-further-simplified}. Each data point results from a
+single kinetics scan (as shown in Figure \ref{fig:fit:rate-constants}) at a
+given number density. Since the rate constants are defined to be independent
+(only when $k_3[He] >> k_r$) of number density, one can compute a weighted mean
+value as reported in Table \ref{tab:k3:rate-constants} and
+\ref{tab:kCID:rate-constants}. It should be noted that if the trap loss channel
+is not included (see Section \ref{subsec:rate-loss-channels}), then the
+formation rate ($k_3$) does not vary within the given error bar, but the
+dissociation rate ($k_{CID}$) increases by $20-25\%$. This is also evidently
+seen as shown in Table \ref{tab:k3:rate-constants} and
+\ref{tab:kCID:rate-constants}, i.e., the previously reported values
+\cite{Brunken2017} for $k_{CID_n}$ disagree within the uncertainties due to
+lack of not considering the loss channels. However, the trap loss channel is
+required to fit the total sum (indicated as a black line in Figure
+\ref{fig:trap-and-m30-loss-channel-comparision}). Hence all the derived rate
+constants include the trap loss and other loss channels as described in Section
+\ref{subsec:rate-loss-channels}.
