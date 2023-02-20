@@ -23,6 +23,20 @@ derived by multiplying the cross-section with a relative velocity of reactants
 followed by averaging over a Maxwell-Boltzmann distribution. So, as the
 temperature increases, the collisional velocity and energy increase, which
 increases $k_{CID}$ rate coefficients.
+The relationship between the dissociation rate ($k_{CID}$), Langevin rate ($k_L$) and binding energy ($D_0$) is given by \cite{SGA2015}:
+
+\begin{equation}
+    k_{CID} = k_L \cdot \text{exp} \left( \frac{-D_0}{k_B \cdot T_{coll}} \right)
+    \label{eqn:relation:kCID-kL} 
+\end{equation}
+
+By substiting the expression for $k_L=6 \cdot 10^{-10}$ \pers\ (see Section \ref{discussions:Langevin}), 
+$k_{CID}=5.3 \cdot 10^{-16}$ \pers\ (see Table \ref{tab:kCID:rate-constants}), $k_B=0.6950$ \wnn 
+and T$_{coll}=7.1$ K in Eq. \ref{eqn:relation:kCID-kL}, we get:
+
+\begin{equation}
+    D_0 = 69 \text{ cm}^{-1}
+\end{equation}
 
 However, the formation rates, especially for the ternary association reactions
 between ions and neutrals at a low temperature, possess an inverse temperature
@@ -30,8 +44,8 @@ dependence because of a decrease in the effective probability of forming a
 stable complex with a single collision \cite{herbst_dense_1988} (see Section
 \ref{subsec:rate-theory} for two-step process). This contrasts our observation
 as shown in Figure \ref{fig:off:rate-constants:f(t)}. The ternary rate coefficient exhibiting
-inverse temperature dependence, i.e., $k_3 (\text{T}) \propto \text{T}^{-n}$ ($n > 1$) was obtained
-back in the 1970s by \citet{Herbst1979} for ion-neutral
+inverse temperature dependence, i.e., $k_3 (\text{T}) \propto \text{T}^{-n}$ ($n > 1$) 
+was obtained back in the 1970s by \citet{Herbst1979} for ion-neutral
 three-body association reactions for $T \geq 100$ K.
 Similar inverse temperature dependence was also shown in recent studies based on the classical trajectory approach for low temperatures \cite{perez-rios_communication_2015, greene_universal_2017}.
 
