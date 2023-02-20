@@ -89,5 +89,23 @@ The Langevin rate coefficient, $k_L$, for the \CD + He reaction can be calculate
         k_L = 6 \cdot 10^{-10} \text{ cm}^3 / \text{s}.
    \label{eqn:Langevin-CD+}
 \end{equation}
+\\
+\textbf{He\CD binding energy:}\\
 
-\emph{NOTE}: The computed binding energy of He\CD, $D_e=491$ \wn\ at CCSD(T) /aug-cc-pVTZ level of theory. The binding energy is counterpoise corrected for the basis set superposition error \cite{boys_calculation_1970}.
+The relationship between the dissociation rate ($k_{CID}$), Langevin rate ($k_L$) and binding energy ($D_0$) is given by \cite{SGA2015}:
+
+\begin{equation}
+    k_{CID} = k_L \cdot \text{exp} \left( \frac{-D_0}{k_B \cdot T_{coll}} \right)
+    \label{eqn:relation:kCID-kL} 
+\end{equation}
+
+By substiting the expression for $k_L=6 \cdot 10^{-10}$ \pers\ (see Section \ref{discussions:Langevin}), 
+$k_{CID}=5.3 \cdot 10^{-16}$ \pers\ (see Table \ref{tab:kCID:rate-constants}), $k_B=0.6950$ \wnn 
+and T$_{coll}=7.1$ K in Eq. \ref{eqn:relation:kCID-kL}, we get:
+
+\begin{equation}
+    D_0 = 69 \text{ cm}^{-1}
+\end{equation}
+
+However, the computed binding energy of He\CD, $D_e=491$ \wn\ at CCSD(T) /aug-cc-pVTZ level of theory. The binding energy is counterpoise corrected for the basis set superposition error \cite{boys_calculation_1970}.
+\label{discussions:binding-energy:CD+}
