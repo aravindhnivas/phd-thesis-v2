@@ -1,7 +1,7 @@
 \section{Theory of association reactions}
 \label{subsec:rate-theory}
 
-The helium complex formation process is an association reaction treated here as an independent \qt{two-step} process. In this section, the equation for the overall effective binary association rate constant as described by \citet{gerlich_experimental_1992}, and \citet{bates_radiative_1988}  are simplified and derived as follows.\\
+The helium complex formation process is an association reaction treated here as an independent \qt{two-step} process. In this section, the equation for the overall effective binary association rate constant as described by \citet{gerlich_experimental_1992}, and \citet{bates_radiative_1988}  are simplified and derived as follows.
 
 Initially as the first step, the ion and neutral come together to form an excited intermediate complex: 
 
@@ -21,7 +21,7 @@ where $k_{dis} = \frac{1}{\tau_{dis}}$ is a first-order rate for this back-disso
     (\text{AB}^+) ^* \xrightarrow{k_{rad}} \text{AB}^+ + hv
     \label{eqn:rate-theory:via-hv}
 \end{equation}
-where $k_{rad}$ is a radiative rate \\
+where $k_{rad}$ is a radiative rate
 
 or via stabilizing collision with a neutral reactant molecule B
 
@@ -30,7 +30,7 @@ or via stabilizing collision with a neutral reactant molecule B
     \label{eqn:rate-theory:via-He}
 \end{equation}
 
-where $k_{B}$ is collisional stabilization rate constant with a neutral third body B and its rate is given by $\frac{1}{\tau_B} = k_{B}$ [B] .\\
+where $k_{B}$ is collisional stabilization rate constant with a neutral third body B and its rate is given by $\frac{1}{\tau_B} = k_{B}$ [B] .
 
 The overall association reaction can be summarised as 
 
@@ -69,7 +69,7 @@ The final simplified overall effective binary rate constant ($k_{e}$) and rate (
     R_{e} = k_{e}[He]
     \label{eqn:rate-theory:R*-simplified}
 \end{equation}
-\\
+\\\\
 \textbf{Langevin rate coefficient:}\\
 For ion-neutral reactions, the Langevin rate coefficient, $k_L$, is a classical theoretical reaction rate coefficient given by \citet{langevin_notitle_1905}.  The final equation for $k_L$, with an ion of charge $q$ [in $C$], ion-neutral reduced mass $\mu$ [in amu] and polarizability of the neutral $\alpha$ [in $\mathring{\text{A}}^3$], summarised by \citet{asvany_numerical_2009} Appendix A, is given below
 \label{discussions:Langevin}
@@ -90,22 +90,28 @@ The Langevin rate coefficient, $k_L$, for the \CD + He reaction can be calculate
    \label{eqn:Langevin-CD+}
 \end{equation}
 \\
-\textbf{He\CD binding energy:}\\
+\textbf{He\CD binding energy:}\label{discussions:binding-energy:CD+}\\
 
-However, the computed binding energy of He\CD, $D_e=491$ \wn\ at CCSD(T) /aug-cc-pVTZ level of theory. The binding energy is counterpoise corrected for the basis set superposition error \cite{boys_calculation_1970}.
-\label{discussions:binding-energy:CD+}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/measurements/kinetics/HeCD+_geometry.pdf}
+    \caption{He\CD optimized geometry comuted at CCSD(T)/aug-cc-pVTZ level of theory.}
+    \label{fig:HeCD_geometry}
+\end{figure}
 
-The relationship between the dissociation rate ($k_{CID}$), Langevin rate ($k_L$) and binding energy ($D_0$) is given by \cite{SGA2015}:
+He\CD geometry is optmised at CCSD(T)/aug-cc-pVTZ level of theory. The computed geometry is shown in Figure \ref{fig:HeCD_geometry}. The computed binding energy of He\CD, $D_e=491$ \wn. The binding energy is counterpoise corrected for the basis set superposition error \cite{boys_calculation_1970}.
 
-\begin{equation}
-    k_{CID} = k_L \cdot \text{exp} \left( \frac{-D_0}{k_B \cdot T_{coll}} \right)
-    \label{eqn:relation:kCID-kL} 
-\end{equation}
+% The relationship between the dissociation rate ($k_{CID}$), Langevin rate ($k_L$) and binding energy ($D_0$) is given by \cite{SGA2015}:
 
-By substiting the expression for $k_L=6 \cdot 10^{-10}$ \pers\ (see Section \ref{discussions:Langevin}), 
-$k_{CID}=5.3 \cdot 10^{-16}$ \pers\ (see Table \ref{tab:kCID:rate-constants}), $k_B=0.6950$ \wnn 
-and T$_{coll}=7.1$ K in Eq. \ref{eqn:relation:kCID-kL}, we get:
+% \begin{equation}
+%     k_{CID} = k_L \cdot \text{exp} \left( \frac{-D_0}{k_B \cdot T_{coll}} \right)
+%     \label{eqn:relation:kCID-kL} 
+% \end{equation}
 
-\begin{equation}
-    D_0 = 69 \text{ cm}^{-1}
-\end{equation}
+% By substiting the expression for $k_L=6 \cdot 10^{-10}$ \pers\ (see Section \ref{discussions:Langevin}), 
+% $k_{CID}=5.3 \cdot 10^{-16}$ \pers\ (see Table \ref{tab:kCID:rate-constants}), $k_B=0.6950$ \wnn 
+% and T$_{coll}=7.1$ K in Eq. \ref{eqn:relation:kCID-kL}, we get:
+
+% \begin{equation}
+%     D_0 = 69 \text{ cm}^{-1}
+% \end{equation}
