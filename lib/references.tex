@@ -18,6 +18,9 @@
   }%
 }
 
+% \DeclareFieldFormat[article]{title}{#1}
+% \DeclareFieldFormat[book]{title}{\mkbibemph{#1}}
+
 % legacy year field '{2018}' in entry '[cite name]' is not an integer - this will probably not sort properly.
 \DeclareSourcemap{
   \maps[datatype=bibtex]{
