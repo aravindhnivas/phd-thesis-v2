@@ -18,9 +18,8 @@
 
 \include{title/title}
 
-%% The (optional) dedication can be used to thank someone or display a
-%% significant quotation.
-\dedication{\epigraph{Einsteins work is to make physics more philosophical (in a good sense).}{Hendrik Antoon Lorentz}}
+% \dedication{\epigraph{Einsteins work is to make physics more philosophical (in a good sense).}{Hendrik Antoon Lorentz}}
+\dedication{\emph{To my family and teachers.}}
 
 {
   \cleardoublepage%
@@ -42,14 +41,7 @@
   \listoftables
 }
 
-% \include{summary/summary}
-% \include{preface/preface}
-
-%% Use Arabic numerals for the page numbers of the chapters; turn on thumb indices.
 \mainmatter
-% \include{introduction/introduction}
-% \include{conclusion/conclusion}
-
 
 \part{Introduction and methods}
 \chapter{Introduction}\label{chapter:intro}
@@ -67,9 +59,6 @@
 \input{chapters/CD+ kinetics/cd+_chapter.tex}
 \input{chapters/CO+_ROSAA_paper/co+_chapter.tex}
 
-% \printbibliography[heading=bibintoc]
-
-%% Use letters for the chapter numbers of the appendices.
 \appendix
 \cleardoublepage%
 \phantomsection%
@@ -92,17 +81,12 @@
 
 \bookmarksetup{startatroot}% this is it
 \addtocontents{toc}{\bigskip}% perhaps as well
-
 \printbibliography[heading=bibintoc]
 
-%% Turn off thumb indices for unnumbered chapters.
 \backmatter
-
 \include{summary/index.tex}
 \include{data-management/data-management.tex}
 \include{acknowledgements/acknowledgements}
 \include{publications/publications}
 \include{cv/cv}
-
 \end{document}
-
