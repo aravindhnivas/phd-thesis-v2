@@ -1,6 +1,6 @@
 \section{Rate loss channels}
 \label{subsec:rate-loss-channels}
-\input{chapters/CD+ kinetics/figs/loss-channel}
+
 The ions are stored up to a maximum of 6 seconds, often this leads to a trap loss of stored ions \cite{mikosch_evaporation_2007, mikosch_evaporation_2008}. To include this loss channel, Eq. \ref{eqn:rate:parent-ion}, \ref{eqn:rate:n-1thcomplexes} and \ref{eqn:rate:nth-complexes} are modified into the following:
 
 \begin{equation}
@@ -20,7 +20,7 @@ The ions are stored up to a maximum of 6 seconds, often this leads to a trap los
 
 where $R_{loss}$ indicates the trap loss rate [in \pers] . In addition to the
 $R_{loss}$ channel, we have noticed a growth of m/z=30, which has been seen
-even at a very low pressure where no higher order complexes except He\CD as
+even at a very low pressure where no higher order complexes are formed except He\CD, as
 shown in Figure \ref{fig:trap-and-m30-loss-channel-comparision}. Therefore,
 this channel is accounted for by adding an additional loss channel, as shown
 below:
@@ -32,7 +32,7 @@ below:
 
 The most probable candidate for m/z 30 is DCO$^+$, which could potentially form
 at low temperatures by the following reaction with CO$_2$ or H$_2$O neutrals
-(as shown for CH$^+$ isotope in KIDA database \cite{wakelam_2014_2015}):
+(as shown for the main CH$^+$ isotope in the KIDA database \cite{wakelam_2014_2015}):
 
 \begin{equation}
     \cd^+ + \text{CO}_2 \xrightarrow{} \text{CO} + \text{DCO}^+
@@ -48,6 +48,8 @@ at low temperatures by the following reaction with CO$_2$ or H$_2$O neutrals
     \label{eqn:rate:mass-30-formation}
 \end{equation}
 
+\input{chapters/CD+ kinetics/figs/loss-channel}
+
 Since the m/z 30 also corresponds to the He$_4$\CD complex, Eq.
 \ref{eqn:rate:modified:n-1complexes} is modified only when $n-1=4$ (or Eq.
 \ref{eqn:rate:modified:nth-complexes} when $n=4$) by adding the corresponding
@@ -58,7 +60,7 @@ loss channel \(R_{loss30} \cdot \cd^+\) as shown below:
     \label{eqn:rate:mass-30-correction}
 \end{equation}
 
-The coupled ordinary differential equations for parent ion \CD (Eq.
+The coupled ordinary differential equations for the parent ion \CD (Eq.
 \ref{eqn:rate:parent-ion}, \ref{eqn:rate:modified:parent-ion} or
 \ref{eqn:rate:parent-ion-mass30-loss}) and the formed complexes (Eq.
 \ref{eqn:rate:n-1thcomplexes}, \ref{eqn:rate:nth-complexes} or
