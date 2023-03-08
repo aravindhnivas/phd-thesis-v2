@@ -80,22 +80,22 @@ respectively, and with an earlier absorption study in a glow discharge experimen
 % \input{chapters/CD+ kinetics/tables/table_thz}
 \begin{table}[!htb]
     \centering
-    \caption{Pure-rotational \CDline transition frequency of \CD ion using ROSAA action spectroscopy with Ne tag for temperature range 5-14 K, and $35 \sim \mu$W power.}
+    \caption{Pure-rotational \CDline transition frequency of \CD ion using ROSAA action spectroscopy with Ne tag for temperature range 5-14 K and $35 \sim \mu$W power.}
     \begin{tabular}{rrrrr}
         \hline                                                                        \\
         T$_{trap}$ & Number density           & Frequency      & Depletion & FWHM     \\
         K          & $\times 10 ^{14}$ \percc & MHz            & \%        & kHz      \\
         \\\hline\hline\\
-        16         & 1.9(2)                   & 453521.908(35) & 11(2)     & 455(083) \\
+        16         & 1.9(2)                   & 453521.908(35) & 11(2)     & 455(83) \\
         16         & 1.9(2)                   & 453521.845(63) & 6(1)      & 563(148) \\
-        14         & 1.5(2)                   & 453521.872(26) & 14(1)     & 610(060) \\
-        8.7        & 1.2(2)                   & 453521.843(33) & 19(4)     & 355(078) \\
-        8.7        & 1.8(2)                   & 453521.848(6)  & 22(1)     & 446(014) \\
-        8.7        & 1.5(2)                   & 453521.847(9)  & 24(1)     & 448(022) \\
-        9          & 3.8(5)                   & 453521.828(26) & 14(3)     & 253(060) \\
-        9          & 2.0(3)                   & 453521.858(9)  & 19(1)     & 390(021) \\
-        5.5        & 8(1)                     & 453521.852(26) & 12(3)     & 204(061) \\
-        6          & 1.0(1)                   & 453521.845(28) & 19(2)     & 414(065) \\
+        14         & 1.5(2)                   & 453521.872(26) & 14(1)     & 610(60) \\
+        8.7        & 1.2(2)                   & 453521.843(33) & 19(4)     & 355(78) \\
+        8.7        & 1.8(2)                   & 453521.848(6)  & 22(1)     & 446(14) \\
+        8.7        & 1.5(2)                   & 453521.847(9)  & 24(1)     & 448(22) \\
+        9          & 3.8(5)                   & 453521.828(26) & 14(3)     & 253(60) \\
+        9          & 2.0(3)                   & 453521.858(9)  & 19(1)     & 390(21) \\
+        5.5        & 8(1)                     & 453521.852(26) & 12(3)     & 204(61) \\
+        6          & 1.0(1)                   & 453521.845(28) & 19(2)     & 414(65) \\
         \\\hline\hline\\
     \end{tabular}
 
@@ -109,7 +109,7 @@ The ion temperature (T$_{ion}$) can be determined from a measured line profile
 fitted with a Voigt lineshape (see Section
 \ref{subsec:collisional-ion-temperature} for detail). Figure \ref{fig:Tcoll}
 shows the plot comparing measured nominal trap temperature, T$_{trap}$ and
-derived T$_{ion}$ for \CD, from Table \ref{tab:CD+_He} and \ref{tab:CD+_Ne}.
+derived T$_{ion}$ for \CD from Table \ref{tab:CD+_He} and \ref{tab:CD+_Ne}.
 The plot is compared with the previously determined values in the FELion
 instrument by \citet{kluge_state-selective_2016}. This confirms that the ion
 temperature is higher than the nominal trap temperatures, as observed
@@ -121,15 +121,17 @@ respectively.
 \input{chapters/CD+ kinetics/figs/figure_deriving_Tcoll}
 Our measured \Tion data lies higher than the previous literature data (see Figure \ref{fig:Tcoll}). However, different experimental conditions could explain this difference. Since, as discussed by \citet{endres_incomplete_2017}, various factors such as RF heating, buffer gas thermalisation with trap walls, black-body radiation from surrounding room temperature vacuum chamber, and collision with warm residual gas that enter the cryogenic trap, in principle, can influence the ion temperature.
 
-The measurements are performed at $\sim 35\ \mu$W for \CD $J=0-1$ transition.
-% Similar to deriving T$_{ion}$, one could also derive the power from the Lorentzian parameters using equation \ref{eqn:fL}. However, as depicted in Figure \ref{fig:thz}, the Gaussian part dominates and, thus, the Lorentzian parameters and, subsequently, the power could not be determined within reasonable error limits. 
-The \Tion dependency for \CD ion, of ion-to-buffer gas mass ratio, i.e., for He
-and Ne, could not be determined in this study. However,
-\citet{endres_incomplete_2017} showed that for OH$^-$, the \Tion is independent
-of the ion-to-buffer gas mass ratio using He and HD. The number density
-investigated in the range $(2-6) \cdot 10^{14}$ \percc\ around 5 K temperature
-for helium (see Table \ref{tab:CD+_He}) did not influence the derived T$_{ion}$
-within the error limits.
+% The measurements are performed at $\sim 35\ \mu$W for \CD $J=0-1$ transition.
+% Similar to deriving T$_{ion}$, one could also derive the power from the Lorentzian parameters using equation \ref{eqn:fL}. However, as depicted in Figure \ref{fig:thz}, the Gaussian part dominates and, thus, the Lorentzian parameters and, subsequently, the power could not be determined within reasonable error limits.
+
+% maybe include this in the discussion later ?
+% The \Tion dependency for \CD on the ion-to-buffer gas mass ratio, i.e., for He
+% and Ne, could not be determined in this study. However,
+% \citet{endres_incomplete_2017} showed that for OH$^-$, \Tion is independent
+% of the ion-to-buffer gas mass ratio using He and HD. The number density
+% variation in the range $(2-6) \cdot 10^{14}$ \percc\ around 5 K temperature
+% for helium (see Table \ref{tab:CD+_He}) did not influence the derived T$_{ion}$
+% within the error limits.
 
 The effective collisional temperature, i.e., T$_{coll}$, is derived from \Ttrap
 and \Tion using equation \ref{eqn:Tcoll}. In detail, the following sections
@@ -139,8 +141,8 @@ simulations at a given collisional temperature.
 \subsection{Kinetics}
 \label{subsec:CD+-kinetics}
 
-The measured formation rate constants ($k_3$) in kinetic experiments are a
-weighted averaged rate coefficient over the thermal population of rotational
+The measured formation rate constants ($k_3$) in kinetic experiments are 
+weighted average rate coefficients over the thermal population of rotational
 levels ($J$) at a given collisional temperature (T$_{coll}$). The rotational
 state-specific ternary rate constants ($k_{3_1}$) for the first attachment
 process can be written as
@@ -150,25 +152,23 @@ process can be written as
     \label{eqn:rate-constant-weighted}
 \end{equation}
 
-where $N_{\text{CD}^+ (J)}$ and $N_{\text{CD}^+}$ indicates the fraction of
-thermal population at specific rotational $J$ level and total population of \CD
-ion, respectively.\\ \input{chapters/CD+
-    kinetics/figs/on-rate-constant_1-funcOf_nHe}
+where $N_{\text{CD}^+ (J)}$ indicate the thermal population 
+at a specific rotational $J$ level and $N_{\text{CD}^+}$  is the total population of \CD ion on all $J$ levels.\\
+
+\input{chapters/CD+ kinetics/figs/on-rate-constant_1-funcOf_nHe.tex}
 
 Figure \ref{fig:on:effective-and-ternary} shows the He\CD formation rate
 coefficient as described in equation \ref{eqn:rate-constant-weighted}. The
-formation rate coefficients ($k_{3_1}$) for the first complex (He\CD) at
-T$_{coll}=7(1)$ K, measured with and without the presence of radiation resonant
-with $J=0-1$ transition of \CD ion. It is denoted by $k_{3_1}(ON)$ and
-$k_{3_1}(OFF)$, respectively and as shown in Figure
-\ref{fig:off:rate-constants} and \ref{fig:on:rate-constants}, they are derived
-and given by:
+formation rate coefficients ($k_{3_1}$) for the first complex (He\CD) measured with and without the presence of radiation resonant with the $J=0-1$ transition of \CD ion is denoted by $k_{3_1}(ON)$ and
+$k_{3_1}(OFF)$, respectively (see Figure \ref{fig:off:rate-constants} and \ref{fig:on:rate-constants}).
+
+The derived rate constants at T$_{coll}=7$ K and P$=3.5\times 10^{-5}$ W, is given by:
 
 \begin{align}
     \label{eqn:k-on-off}
     \begin{split}
         k_{3_1}(OFF) &= 1.1(1) \cdot 10^{-30} \text{ cm}^6/\text{s}\\
-        k_{3_1}(ON) &= 8.4(1.8) \cdot 10^{-31} \text{ cm}^6/\text{s}
+        k_{3_1}(ON) &= 7.8(8) \cdot 10^{-31} \text{ cm}^6/\text{s}
     \end{split}
 \end{align}
 
