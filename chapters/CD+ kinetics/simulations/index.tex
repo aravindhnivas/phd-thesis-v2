@@ -29,7 +29,10 @@ collisional temperature happens within 0.3 ms under typical experimental
 conditions.
 
 \input{chapters/CD+ kinetics/simulations/figs/collisional-comparision}
+
 The spontaneous emission rates $(A)$ are also included in this process, as discussed in section \ref{subsec:ROSAA-simulation-spont}. However, the collision process dominates it by $8$ orders of magnitude (see Table \ref{appendix:tab:collisional-rate-coefficients} and \ref{appendix:tab:radiative-rate-coefficients}). Therefore, in the following sections, spontaneous emission rates will not be mentioned specifically, although it is included in all the cases during simulation.
+
+\clearpage
 
 \subsection{Radiative processes}
 \label{subsec:CD+-kinetics-simulation-coll-rad}
@@ -49,20 +52,36 @@ in the same order of magnitude as collisional rates, i.e., $>10^{4}$ \pers\
 
 \input{chapters/CD+ kinetics/simulations/figs/coll_rad_boltzmann_comparision}
 
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/measurements/kinetics/CD+_power_saturation_up_down.pdf}
+    \caption{
+        Simulated relative rotational level population ratio (up and down indicate rotational level 
+        of $J=1$ and $J=0$, respectively) of the CD$^+$ as a function of continuous excitation 
+        power on the \CDline transition after storing for 1 ms in a trap with a constant 
+        He number density of [He]$= 2.2\cdot$10$^{14}$~cm$^{-3}$. 
+        The simulation only involves collisional and radiative processes.
+    }
+    \label{fig:pop_ratio_vs_power}
+\end{figure}
+
 As depicted in Figure \ref{fig:ROSAA-sim-coll-rad-boltzmann}, the distribution
 no longer follows a Boltzmann distribution. Furthermore, if the radiative rates
-dominate the collisional rates (Coll. $\ll$ Rad), say for power $10^{5}$
-higher, i.e., 3.5 W, we get rates in the order of $>10^{7}$ \pers. The
-resulting population on $J=0$ and $J=1$ quantum levels should then reach their
-statistical weights ($g(J) = 2J + 1$). The simulated relative population
-evolution and equilibrium population under the condition Coll. $\ll$ Rad. is
-shown in Figure \ref{fig:ROSAA-sim-coll-rad-population-boltzmann-higher-rad},
-for a duration of 1 ms. Figure
+dominate the collisional rates (Coll. $\ll$ Rad), the resulting population on $J=0$ and $J=1$ 
+quantum levels should then reach their statistical weights ($g(J) = 2J + 1$) and 
+consequently population ratio ($J=1$ to $J=0$) reaches the value 3. 
+The simulated relative population ratio, i.e., the ratio of the population on $J=1$ to $J=0$ 
+rotational quantum levels as a function of excitation radiation power at a [He]$=2.2\cdot10^{14}$\percc, 
+is shown in Figure \ref{fig:pop_ratio_vs_power}. The population ratio reaches the value 3, only at a power of $> 10^{-2}$ W.
+
+\input{chapters/CD+ kinetics/simulations/figs/coll_rad_boltzmann_comparisio_higher_rad}
+
+The simulated relative population evolution and equilibrium population under the 
+condition Coll. $\ll$ Rad. is shown in Figure 
+\ref{fig:ROSAA-sim-coll-rad-population-boltzmann-higher-rad}, for a duration of 1 ms. Figure
 \ref{fig:ROSAA-sim-coll-rad-boltzmann-higher-rad} also clearly shows the $J=0$
 and $J=1$ rotational states reaching their statistical weight of 0.25 and 0.75,
 respectively.
-
-\input{chapters/CD+ kinetics/simulations/figs/coll_rad_boltzmann_comparisio_higher_rad}
 
 The next section investigates the helium attachment process, vital in
 understanding the ROSAA signal, i.e., the measured peak intensity [in $\%$].
