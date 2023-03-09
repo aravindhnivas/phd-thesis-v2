@@ -102,6 +102,8 @@ respectively, and with an earlier absorption study in a glow discharge experimen
     \label{tab:CD+_Ne}
 \end{table}
 
+\clearpage
+
 \subsection{Determining ion temperature}
 \label{subsec:CD+-Tion}
 
@@ -113,30 +115,31 @@ derived T$_{ion}$ for \CD from Table \ref{tab:CD+_He} and \ref{tab:CD+_Ne}.
 The plot is compared with the previously determined values in the FELion
 instrument by \citet{kluge_state-selective_2016}. This confirms that the ion
 temperature is higher than the nominal trap temperatures, as observed
-previously in the 22-pole ion trap \cite{asvany_numerical_2009,
-    otto_internal_2013, endres_incomplete_2017}. For T$_{trap} < 5$ and $>5$ K, the
-corresponding T$_{ion}$ are derived from He-ROSAA and Ne-ROSAA measurements,
-respectively.
+previously in the 22-pole ion trap \cite{asvany_numerical_2009, otto_internal_2013, endres_incomplete_2017}. 
+For T$_{trap} < 5$ and $>5$ K, the corresponding T$_{ion}$ are derived from He-ROSAA and Ne-ROSAA
+measurements, respectively. Each data points in Figure \ref{fig:Tcoll} is an averaged value
+of corresponding T$_{ion}$ derived from atleast two measurements of FWHM as shown in Table \ref{tab:CD+_He} 
+and \ref{tab:CD+_Ne}. The large uncertainty of T$_{ion}$ value in our measurement is because of the
+large uncertainty in the derived FWHM from measured line profile (see Table \ref{tab:CD+_He} and \ref{tab:CD+_Ne}).
+However, the trend of T$_{ion}$ with T$_{trap}$ is consistent with the previous measurements.
 
 \input{chapters/CD+ kinetics/figs/figure_deriving_Tcoll}
 Our measured \Tion data lies higher than the previous literature data (see Figure \ref{fig:Tcoll}). However, different experimental conditions could explain this difference. Since, as discussed by \citet{endres_incomplete_2017}, various factors such as RF heating, buffer gas thermalisation with trap walls, black-body radiation from surrounding room temperature vacuum chamber, and collision with warm residual gas that enter the cryogenic trap, in principle, can influence the ion temperature.
 
 % The measurements are performed at $\sim 35\ \mu$W for \CD $J=0-1$ transition.
 % Similar to deriving T$_{ion}$, one could also derive the power from the Lorentzian parameters using equation \ref{eqn:fL}. However, as depicted in Figure \ref{fig:thz}, the Gaussian part dominates and, thus, the Lorentzian parameters and, subsequently, the power could not be determined within reasonable error limits.
-
 % maybe include this in the discussion later ?
 % The \Tion dependency for \CD on the ion-to-buffer gas mass ratio, i.e., for He
 % and Ne, could not be determined in this study. However,
 % \citet{endres_incomplete_2017} showed that for OH$^-$, \Tion is independent
-% of the ion-to-buffer gas mass ratio using He and HD. The number density
-% variation in the range $(2-6) \cdot 10^{14}$ \percc\ around 5 K temperature
-% for helium (see Table \ref{tab:CD+_He}) did not influence the derived T$_{ion}$
-% within the error limits.
-
-The effective collisional temperature, i.e., T$_{coll}$, is derived from \Ttrap
+% of the ion-to-buffer gas mass ratio using He and HD. 
+The number density variation in the range $(2-6) \cdot 10^{14}$ \percc\ around 5 K temperature
+for helium (see Table \ref{tab:CD+_He}) did not influence the derived T$_{ion}$
+within the error limits. The effective collisional temperature, i.e., T$_{coll}$, is derived from \Ttrap
 and \Tion using equation \ref{eqn:Tcoll}. In detail, the following sections
 investigate the kinetic measurement in the presence of radiation and ROSAA
 simulations at a given collisional temperature.
+
 
 \subsection{Kinetics}
 \label{subsec:CD+-kinetics}
@@ -144,26 +147,22 @@ simulations at a given collisional temperature.
 The measured formation rate constants ($k_3$) in kinetic experiments are 
 weighted average rate coefficients over the thermal population of rotational
 levels ($J$) at a given collisional temperature (T$_{coll}$). The rotational
-state-specific ternary rate constants ($k_{3_1}$) for the first attachment
-process can be written as
-
+state-specific ternary rate constants ($k_{3_1}$) for the first attachment process can be written as:
 \begin{equation}
     k_{3_1} (T_{coll}) = \frac{\sum_{J} k_{3_1} (J, \text{T}_{coll}) \cdot N_{\text{CD}^+ (J)} }{N_{\text{CD}^+}}
     \label{eqn:rate-constant-weighted}
 \end{equation}
 
-where $N_{\text{CD}^+ (J)}$ indicate the thermal population 
-at a specific rotational $J$ level and $N_{\text{CD}^+}$  is the total population of \CD ion on all $J$ levels.\\
+where $N_{\text{CD}^+ (J)}$ indicate the thermal population at a specific rotational $J$ level 
+and $N_{\text{CD}^+}$ is the total population of \CD ion on all $J$ levels.\\
 
 \input{chapters/CD+ kinetics/figs/on-rate-constant_1-funcOf_nHe.tex}
-
 Figure \ref{fig:on:effective-and-ternary} shows the He\CD formation rate
 coefficient as described in equation \ref{eqn:rate-constant-weighted}. The
 formation rate coefficients ($k_{3_1}$) for the first complex (He\CD) measured with and without the presence of radiation resonant with the $J=0-1$ transition of \CD ion is denoted by $k_{3_1}(ON)$ and
 $k_{3_1}(OFF)$, respectively (see Figure \ref{fig:off:rate-constants} and \ref{fig:on:rate-constants}).
 
 The derived rate constants at T$_{coll}=7$ K and P$=3.5\times 10^{-5}$ W, is given by:
-
 \begin{align}
     \label{eqn:k-on-off}
     \begin{split}
