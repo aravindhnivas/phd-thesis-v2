@@ -1,8 +1,8 @@
 \section{ROSAA Numerical simulation}
 \label{subsec:CD+-kinetics-simulation}
 
-In this section, we shall discuss the results from the numerical simulation of
-the ROSAA processes described in detail in Section
+In this section, we discuss the results from the numerical simulation of
+the ROSAA processes described in Section
 \ref{subsec:ROSAA-simulation}.
 
 \subsection{Collisional process}
@@ -11,7 +11,7 @@ the ROSAA processes described in detail in Section
 As the hot \CD ions from the ion source (T$_{coll}=300$ K) enter the 22-pole
 ion trap (T$_{trap}=4.8(3)$ K), they are collisionally cooled down by He buffer
 gas atoms and, at equilibrium, reach the effective collision temperature
-(T$_{coll}=7(1)$ K). The T$_{coll}$ is derived using T$_{ion}$ and T$_{trap}$
+(T$_{coll}=7(1)$ K). T$_{coll}$ is derived using T$_{ion}$ and T$_{trap}$
 temperature as described in Eq. \ref{eqn:Tcoll} (see Section
 \ref{subsec:CD+-Tion}). In the absence of radiation and attachment processes,
 the collisional process reaches an equilibrium of the relative population of
@@ -30,7 +30,7 @@ conditions.
 
 \input{chapters/CD+ kinetics/simulations/figs/collisional-comparision}
 
-The spontaneous emission rates $(A)$ are also included in this process, as discussed in section \ref{subsec:ROSAA-simulation-spont}. However, the collision process dominates it by $8$ orders of magnitude (see Table \ref{appendix:tab:collisional-rate-coefficients} and \ref{appendix:tab:radiative-rate-coefficients}). Therefore, in the following sections, spontaneous emission rates will not be mentioned specifically, although it is included in all the cases during simulation.
+The spontaneous emission rates $(A)$ are also included in this process, as discussed in section \ref{subsec:ROSAA-simulation-spont}. However, the collision process dominates it by $8$ orders of magnitude (see Table \ref{appendix:tab:collisional-rate-coefficients} and \ref{appendix:tab:radiative-rate-coefficients}). Therefore, in the following sections, spontaneous emission rates will not be mentioned specifically, although they are included in all the cases during simulation.
 
 \clearpage
 
@@ -56,8 +56,8 @@ in the same order of magnitude as collisional rates, i.e., $>10^{4}$ \pers\
     \centering
     \includegraphics[width=0.7\textwidth]{figures/measurements/kinetics/CD+_power_saturation_up_down.pdf}
     \caption{
-        Simulated relative rotational level population ratio (up and down indicate rotational level 
-        of $J=1$ and $J=0$, respectively) of the CD$^+$ as a function of continuous excitation 
+        Simulated relative rotational level population ratio (up and down indicates the rotational level 
+        of $J=1$ and $J=0$, respectively) of \CD as a function of continuous excitation 
         power on the \CDline transition after storing for 1 ms in a trap with a constant 
         He number density of [He]$= 2.2\cdot$10$^{14}$~cm$^{-3}$. 
         The simulation only involves collisional and radiative processes.
@@ -71,8 +71,8 @@ dominate the collisional rates (Coll. $\ll$ Rad), the resulting population on $J
 quantum levels should then reach their statistical weights ($g(J) = 2J + 1$) and 
 consequently population ratio ($J=1$ to $J=0$) reaches the value 3. 
 The simulated relative population ratio, i.e., the ratio of the population on $J=1$ to $J=0$ 
-rotational quantum levels as a function of excitation radiation power at a [He]$=2.2\cdot10^{14}$\percc, 
-is shown in Figure \ref{fig:pop_ratio_vs_power}. The population ratio reaches the value 3, only at a power of $> 10^{-2}$ W.
+rotational quantum levels as a function of excitation radiation power at [He]$=2.2\cdot10^{14}$ \percc, 
+is shown in Figure \ref{fig:pop_ratio_vs_power}. The population ratio reaches the value 3 only at a power of $> 10^{-2}$ W.
 
 \input{chapters/CD+ kinetics/simulations/figs/coll_rad_boltzmann_comparisio_higher_rad}
 
@@ -90,7 +90,7 @@ understanding the ROSAA signal, i.e., the measured peak intensity [in $\%$].
 \label{subsec:CD+-kinetics-simulation-coll-rad-att}
 
 As the \CD ions collide with the He buffer gas at low temperature and high
-number density, they form He complexes, i.e., He$_n$\CD. The formation and
+number density, they form He complexes, i.e., He$_n$CD$^+$. The formation and
 subsequent dissociation rate coefficients of He$_n$\CD are discussed in section
 \ref{subsec:rate-constants}. The numerical simulation method for the attachment
 process is described in detail in Section \ref{subsec:ROSAA-simulation-att}.
@@ -99,8 +99,8 @@ The ROSAA action spectroscopic technique utilises the rotation-specific
 rate coefficients for the helium attachment process to observe a change in
 helium-complexes formed at resonant frequency (see Section
 \ref{sec:methods:rotation}). Since, as discussed above, involving radiative
-processes re-distributes the population of rotational quantum states this
-subsequently results in different numbers of complexes formed, thus a
+processes re-distribute the population of rotational quantum states, this
+subsequently results in different numbers of complexes form-ed, thus a
 ROSAA-signal, i.e., depletion counts [\%] of He\CD as shown in Figure
 \ref{fig:thz:HeCD+}.
 
@@ -108,13 +108,13 @@ A complete simulation involving the radiation, collisional, and attachment
 processes is vital to investigate the experimentally measured rotational
 spectrum, i.e., ROSAA-signal intensity. However, a rotational state-specific
 rate coefficient is required to include the attachment process, which is not
-straightforward to measure directly. Nevertheless, as discussed in section
+straightforward to measure directly. Nevertheless, as discussed in the section
 \ref{sec:CD+-kinetics}, a weighted rate coefficient was measured for the \CD + He 
 reaction, with and without the presence of radiation resonant with
 the $J=0-1$ transition of the \CD ion, and this allows to obtain the ratio between the
 rate-coefficients in the two rotational levels.
 
-Since the relative population of ${\text{CD}^+}(0) + \text{CD}^+(1) \geq 0.97 $
+Since the relative population of ${\text{CD}^+}(0) + \text{CD}^+(1) \text{ is} \geq 0.97 $
 at T$_{coll}=7$ K (see Figure \ref{fig:ROSAA-sim-collisional}), we can assume a
 2-level quantum system to determine the rotational state-specific ternary rate
 constants ($k_{3_1}(J)$) from the measured, weighted ternary rate coefficients
@@ -178,9 +178,9 @@ estimated value $a=0.55(5)$ from \citet{Brunken2017}. In the previous study,
 \cite{Brunken2017}, the \qt{$a$} value is estimated by measuring the \CDline
 transition of \CD at different number density and radiation power and fitting
 the measured ROSAA depletion signal intensity to the numerical model. However,
-in this study, the \qt{$a$} is experimentally derived from kinetic measurement
+in this study, \qt{$a$} is experimentally derived from kinetic measurements
 in the presence and absence of radiation resonant with \CDline of \CD molecular
-ion. This approach also directly validates equation
+ions. This approach also directly validates equation
 \ref{eqn:rate-constant-weighted}, and thereby, the rotational state-dependent
 attachment of rare gas atoms to molecular ions. In addition, this
 systematically supports our investigation of various processes involved in the
@@ -189,7 +189,7 @@ the main motivation is to develop a robust general-purpose ROSAA numerical
 model that is adaptable to systematically add various processes.
 
 In the following section, the derived \qt{$a$} is used to analyse the full
-model, including collisional, radiation and attachment process to the measured
+model, including collisional, radiation and attachment processes to the measured
 pure rotational transition intensity of the \CD ion.
 
 \subsection{Analysing numerical results}
@@ -199,25 +199,25 @@ The full model simulation, i.e., including collisional, radiation and
 attachment processes for the \CD molecular ion up to 5 rotational quantum states
 ($J=0-5$), is shown in Figure \ref{fig:thz-sim:rel-pop:1ms} for T$_{coll}=7$ K
 temperature, $2.2 \cdot 10^{14}$ \percc\ helium number density, $k_{3_1}$
-ratio, $a=0.5$ and $3.5\ \mu$W power.
+ratio $a=0.5$ and $3.5\ \mu$W power.
 % In addition to \CD, the simulation considers up to two complexes (He\CD and He$_2$\CD) at 7 K temperature, $2.2 \cdot 10^{14}$ \percc\ helium number density, $k_{3_1}$ ratio, $a=0.5$ and $3.5\ \mu$W power. 
 The \CD$(J)$ level with $J>3$ become insignificantly populated within $<0.5$ ms, i.e.,
 reaching $\ll 10^{-10}$ in relative population ratio while \CD(2) and \CD(3)
 equilibrate to $<10^{-2}$ and $<10^{-6}$, respectively, in relative population. 
 Therefore, in this simulation the ternary attachment rate coefficients $k_{3_1}(J\geq 2)=0$
-due to insignificant population in these states. Consequently, only the
-\CD$(J=0)$ and \CD$(J=1)$ participate in the cluster formation. However, the
+due to the insignificant population in these states. Consequently, only the
+\CD$(J=0)$ and \CD$(J=1)$ participate in the cluster formation. However, 
 \CD$(J \geq 2)$ is included in the simulation to monitor its relative
 population evolution.
 
 % \input{chapters/CD+ kinetics/simulations/figs/fig_coll_rad_att_1ms}
 \input{chapters/CD+ kinetics/simulations/figs/population-comparision}
 
-The attachment and dissociation rate timescale are in the order of $10^{-1}$
+The attachment and dissociation rate timescale is in the order of $10^{-1}$
 \pers\ (see Table \ref{appendix:tab:attachment-rate-coefficients}). Thus, the
-population of the first complex (He\CD) is very small, i.e., $<10^{-4}$ in relative
+population of the first complex (HeCD$^+$) is very small, i.e., $<10^{-4}$ in relative
 population, during the first 1 ms; however, it tends to increase. Therefore,
-when the simulation is extended for a longer duration, i.e., for 600 ms (see
+when the simulation is extended to longer duration, i.e., 600 ms (see
 Figure \ref{fig:thz-sim:rel-pop:0.6s}) and 100 s (see Figure
 \ref{fig:thz-sim:rel-pop:100s}), the He\CD relative population reaches 0.03 and
 attains equilibrium at 0.2 after 40 s, respectively. Also, regarding our initial
@@ -229,16 +229,16 @@ but for \CD$(J\geq 2)$ it is $\ll 10^{-4}$.
 As expected, and shown in Figure \ref{fig:thz-sim:rel-pop:0.6s} and
 \ref{fig:thz-sim:rel-pop:100s}, a significant difference in population is
 observed in the first He\CD complex with (-ON) and without (-\--OFF) radiation resonant 
-with the \CDline transition of \CD. This difference is indeed the measured ROSAA 
-depletion signal of He\CD at resonance. Figure \ref{fig:thz-sim:signal:0.6s} represent 
+with the \CDline transition of CD$^+$. This difference is indeed the measured ROSAA 
+depletion signal of He\CD at resonance. Figure \ref{fig:thz-sim:signal:0.6s} presents 
 the expected signal intensity of the measured rotational spectrum (as shown in Figure \ref{fig:thz}) 
 for a trap duration of 600 ms.
 
 At longer time the signal decreases (see Figure \ref{fig:thz-sim:signal:100s}),
-this maybe be due to the fact that the formed higher order of complexes 
+this may be because of the formed higher order of complexes 
 does not contribute to the signal intensity and subsequently causes the signal to decrease, 
 eventually reaching a equilibrium value. 
-Before analysing further, let us look at approaches to validate our model.
+Before analysing further, let us look at approaches to validate our model.\\
 
 
 There are three direct ways to verify the validity of the numerical model.
@@ -252,13 +252,13 @@ There are three direct ways to verify the validity of the numerical model.
           \ref{fig:ROSAA-sim-collisional-boltzmann}.
     \item Another way is when collisional and radiative processes are involved,
           competing with each other. Under conditions when the radiative process (for
-          the \CDline transition of \CD) dominates the collisional process (Coll. $\ll$
+          the \CDline transition of CD$^+$) dominates the collisional process (Coll. $\ll$
           Rad.), the equilibrium relative population of \CD$(J=0)$ and \CD$(J=1)$ should
           reach their statistical weights ($g(J) = 2J+1$), i.e., 0.25 and 0.75,
           respectively. This has been discussed in section
           \ref{subsec:CD+-kinetics-simulation-coll-rad} and can be verified in Figure
           \ref{fig:ROSAA-sim-coll-rad-boltzmann-higher-rad}.
-    \item Another direct approach is to verify the the signal intensity is $\sim 0$ when
+    \item Another direct approach is to verify the signal intensity is $\sim 0$ when
           the $k_{3_1}$ ratio $a=1$. This indicates that the rate constants are not
           state-dependent but rather the same, thus leading to the absence of ROSAA
           signal intensity.

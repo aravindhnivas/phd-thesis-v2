@@ -7,13 +7,13 @@ As discussed in Section \ref{subsec:rate-constants}, Figure
 \ref{fig:off:rate-constants:f(t)} shows the experimentally measured formation
 ($k_{3_1}$) and collision induced dissociation ($k_{CID_1}$) rate coefficient plotted
 as a function of temperature (T$_{trap}$). The subscript $1$ corresponds to the
-first complex, i.e., He\CD. As depicted in the figure, both the $k_{3_1}$ and
+first complex, i.e., HeCD$^+$. As depicted in the figure, both $k_{3_1}$ and
 $k_{CID_1}$ increase as the temperature increases.
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=1\textwidth]{figures/measurements/kinetics/functionOf_T/off_k3_kCID_as_functionOfT_with_Tcol.pdf}
-    \caption{He\CD The formation (\textcolor{blue}{$k_{3_1}$}) and dissociation (\textcolor{red}{$k_{CID_1}$}) rate constants (weighted) are plotted as a function of nominal trap temperature (T$_{trap}$) and ion temperature (T$_{ion}$). The x-axis error bar corresponds to T$_{trap}$. }
+    \caption{He\CD formation (\textcolor{blue}{$k_{3_1}$}) and dissociation (\textcolor{red}{$k_{CID_1}$}) rate constants (weighted) are plotted as a function of nominal trap temperature (T$_{trap}$) and ion temperature (T$_{ion}$). The x-axis error bar corresponds to T$_{trap}$. }
     \label{fig:off:rate-constants:f(t)}
 \end{figure}
 
@@ -24,7 +24,7 @@ followed by averaging over a Maxwell-Boltzmann distribution. So, as the
 temperature increases, the collisional velocity and energy increase, which
 increases $k_{CID}$ rate coefficients.\\
 
-The dependence of $k_{CID}$ to temperature has been discussed by \citet{SGA2015}
+The dependence of $k_{CID}$ on temperature has been discussed by \citet{SGA2015}
 with a simple Arrhenium like expression as given below:
 
 \begin{equation}
@@ -39,19 +39,19 @@ The binding energy for the dissociation of \CD is 491 \wnn and $k_L = 6.06 \cdot
 Therefore, by substituting the values in Eq. \ref{eqn:arrhenius-like-expression-for-kCID}, we get 
 $k_{CID} = 8.9 \cdot 10^{-54}$ cm$^3$\pers at T$_{coll}=7$ K. However, from Table
 \ref{tab:kCID:rate-constants}, we have $k_{CID} = 5.2(1.5) \cdot 10^{-16}$ cm$^3$\pers 
-at T$_{coll}=7$ K which is significantly much larger than the obtained value.
-The very small computed value for the dissociation rate coefficient perhaps due to the fact that the    
+at T$_{coll}=7$ K which is significantly larger than the obtained value.
+The very small computed value for the dissociation rate coefficient is perhaps due to the fact that the    
 equation \ref{eqn:arrhenius-like-expression-for-kCID} assumes the thermal equilibrium
-of reactants, thereby incorpoarates only the fraction
-of ions with a energy $>= D_0$, which is determined by the Boltzmann distribution.  
-However, in our experiment, we have continuous inflow of helium neutral atoms
-which leads to a non-equilibrium thermal effects and deviation from the Boltzmann distribution.
+of reactants, thereby incorporates only the fraction
+of ions with an energy $>= D_0$, which is determined by the Boltzmann distribution.  
+However, in our experiment, we have a continuous inflow of helium neutral atoms
+which leads to non-equilibrium thermal effects and deviation from the Boltzmann distribution.
 % This effect can be more pronounced at a low temperature experiments, since under thermal equilibrium
 % the formed ions have low energy to overcome the dissociation barrier.
 As a consequence, the dissociation rate coefficient is much larger than the computed value.\\
 
 However, the formation rates, especially for the ternary association reactions
-between ions and neutrals at a temperatures, possess an inverse temperature
+between ions and neutrals, possess an inverse temperature
 dependence because of a decrease in the effective probability of forming a
 stable complex with a single collision \cite{herbst_dense_1988} (see Section
 \ref{subsec:rate-theory} for two-step process). This contrasts our observation
@@ -61,7 +61,9 @@ was discussed back in the 1970s by \citet{Herbst1979} for ion-neutral
 three-body association reactions for $T \geq 100$ K.
 Similar inverse temperature dependence was also shown in recent studies based on the classical trajectory approach for low temperatures \cite{perez-rios_communication_2015, greene_universal_2017}.
 
-\citet{bohringer_temperature_1983} experimentally investigated the temperature dependence ($30-300$ K) of He$_2^+$ formation via ternary association using a cryogenic selected ion drift tube, i.e., a similar ion-neutral reaction, but He$^+$ ion is investigated instead of molecular \CD, as shown below:
+\citet{bohringer_temperature_1983} experimentally investigated the temperature dependence ($30-300$ K) of He$_2^+$ 
+formation via ternary association using a cryogenic selected ion drift tube, i.e., a similar ion-neutral reaction, but 
+the He$^+$ ion is investigated instead of molecular \CD
 
 \begin{equation}
     \text{He}^+ + 2\text{He} \rightarrow \text{He}_2^+ + \text{He}
@@ -69,7 +71,7 @@ Similar inverse temperature dependence was also shown in recent studies based on
 \end{equation}
 
 They observed an inverse temperature dependence and derived a relation for Eq.
-\ref{eqn:He2+-ternary}, such as:
+\ref{eqn:He2+-ternary}:
 
 \begin{equation}
     k_3 (\text{T}) = 1.4 \times 10^{-31} (300 \text{ K} / \text{T})^{0.6} \text{ cm}^6\text{s}^{-1}
@@ -85,7 +87,7 @@ N$^+$, i.e.,
 
 \[ \text{N}^+ + 2\text{He} \rightarrow \text{NHe}^+ + \text{He}\]
 
-The N$^+$ ion has the same $m/z\ 14$ as \CD. The experimental procedure is
+The N$^+$ ion has the same $m/z\ 14$ as CD$^+$. The experimental procedure is
 similar to the one described in Section \ref{sec:CD+-kinetics}. The derived
 formation and dissociative rate coefficients are shown in Figure
 \ref{fig:rate-constants:N+} (in appendix) for a temperature T$_{trap}=5-10$ K
@@ -96,7 +98,7 @@ Figure \ref{fig:HeN+:rate-constants-f(t)}.
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=1\textwidth]{figures/measurements/kinetics/functionOf_T/N+/off_k3_kCID_as_functionOfT_with_Tcol.pdf}
-    \caption{HeN$^+$ formation (\textcolor{blue}{$k_{3_1}$}) and dissociation (\textcolor{red}{$k_{CID_1}$}) rate constants (weighted) are plotted as a function of nominal trap temperature. The T$_{ion}$ indicated here is measured for the \CD ion which has the same m/z 14.}
+    \caption{HeN$^+$ formation (\textcolor{blue}{$k_{3_1}$}) and dissociation (\textcolor{red}{$k_{CID_1}$}) rate constants (weighted) are plotted as a function of the nominal trap temperature. The T$_{ion}$ indicated here is measured for the \CD ion which has the same m/z 14.}
     \label{fig:HeN+:rate-constants-f(t)}
 \end{figure}
 
@@ -104,11 +106,10 @@ Figure \ref{fig:HeN+:rate-constants-f(t)}.
 Surprisingly, similar to \CD ion, the N$^+$ molecular ion also shows the same increasing trend for the $k_{3_1}$. The measured ternary association and collision-induced dissociation rate coefficients are summarised in Table \ref{tab:k3:rate-constants-T-depen}.
 
 However, most experiments previously performed, including the study on He$^+$
-previously discussed above are performed at temperatures $>10$ K.
+discussed above are performed at temperatures $>10$ K.
 Interestingly, \citet{gerlich_infrared_2018} again investigated the He$_2^+$
 formation (see Eq. \ref{eqn:He2+-ternary}) using a 22-pole cryogenic ion trap
-but at T$_{trap}=4$ K temperature. Unlike the experiments at $>10$ K (see
-above), these results disagrees (i.e., $k_3$ deviates from inverse proportionality to temperature) with the
+but at T$_{trap}=4$ K temperature. Unlike the experiments at $>10$ K, these results disagree (i.e., $k_3$ deviates from inverse proportionality to temperature) with the
 relation as shown in equation \ref{eqn:k3(T)-dependence}.
 
 \citet{xie_quantum_2003} performed a quantum dynamical study for the same He$_2^+$ formation reaction via three-body association (Eq. \ref{eqn:He2+-ternary}). They reported that the ternary association rate coefficient dramatically increases with temperature, i.e., $k_3(\text{T}) \propto \text{T}$, but only at temperatures below $< 30$ K, then it drops after reaching a maximum value. They argued that this behaviour is because, up to a certain low temperature, the population of quantum states of ions contributing to a resonance state promoting complex formation increases with temperature, thus increasing in $k_3$. This also indicates that the particular ion-neutral reaction proceeds via a two-step mechanism as discussed in Section \ref{subsec:rate-theory}.
@@ -118,7 +119,7 @@ via a resonance state, theoretical calculations need to be performed. First
 quasi-classical scattering calculations cannot reproduce the observed
 temperature dependence (J. Perez-Rios, private communication), thus full quantum
 scattering calculations are likely needed. The fact that both temperature
-curves (for N$^+$ and \CD) show the same behaviour, might also indicate an
+curves (for N$^+$ and CD$^+$) show the same behaviour, might also indicate an
 experimental artefact, e.g., periodic freezing out of He to the trap walls due
 to the 1s duty cycle of the cryostat. In the future, we thus would like to repeat
 the He$_2^+$ reaction at low temperatures in our apparatus and compare the
