@@ -1,0 +1,81 @@
+\begin{titlepage}
+    \begin{center}
+
+        %% The following lines repeat the previous page exactly.
+
+        \vspace*{2\bigskipamount}
+
+        %% Print the title.
+        {\makeatletter
+            \titlestyle\bfseries\LARGE\@title
+            \makeatother}
+
+        %% Print the optional subtitle.
+        {\makeatletter
+            \ifx\@subtitle\undefined\else
+                \bigskip
+                \titlefont\titleshape\Large\@subtitle
+            \fi
+            \makeatother}
+
+        \vfill
+
+        %% Apart from the names and dates, the following text is dictated by the
+        %% promotieregelement.
+
+        {\Large\titlefont\bfseries Proefschrift}
+
+        \bigskip
+        \bigskip
+
+        Dissertation to obtain the degree of the doctor\\
+        from Radboud University Nijmegen\\
+        on the authority of the Rector Magnificus prof. dr. J.H.J.M. van Krieken,\\
+        according to the decision of the Doctorate Board\\
+        to be defended in public on\\
+
+
+        \bigskip
+        \bigskip
+
+        by
+
+        \bigskip
+        \bigskip
+
+        \makeatletter
+        {\Large\titlefont\bfseries\@firstnames\ \MakeUppercase{\titleshape\@lastname}}
+        \makeatother
+
+        \bigskip
+        \bigskip
+
+        born on 28 mei, 1995\\
+        te Uthangarai, India\\
+
+        %% Extra whitespace at the bottom.
+        \vspace*{2\bigskipamount}
+
+    \end{center}
+    \clearpage
+
+    \thispagestyle{empty}
+
+    \noindent This dissertation has been approved by the promotors.
+
+    \bigskip
+    \noindent Composition of the doctoral committee:
+    
+    \begin{tabbing}
+        \hspace{\tabcolsep}\=\hspace{0.33\textwidth}\=\hspace{0.66\textwidth}                   \\[-3\medskipamount]
+        \> Prof.\ dr.\ Britta \ Redlich,    \> Radboud University, \textit{promotor}      \\
+        \> Dr.\ Sandra \ Br\"{u}nken,        \> Radboud University, \textit{copromotor}    \\[\medskipamount]
+        \>\textit{Manuscript committee:}  \\[\smallskipamount]
+        \> dr. \ Oskar Asvany            \> University of Cologne \\
+        \> prof. \ dr.\ Jana \ Roithova            \> Radboud University \\
+        \> prof. \ dr.\ Melanie \ Schnell   \> University of Kiel and DESY \\[\medskipamount]
+        % \>\textit{Other members:} \\[\smallskipamount]
+    \end{tabbing}
+
+\end{titlepage}
+\cleardoublepage
