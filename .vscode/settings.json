@@ -1,3 +1,18 @@
 {
-    "grammarly.files.include": ["**/*.tex"]
+    "grammarly.files.include": ["**/*.tex"],
+    // hide all latex compilation files
+    "files.exclude": {
+        "**/*.aux": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.fls": true,
+        // "**/*.log": true,
+        "**/*.out": true,
+        "**/*.synctex.gz": true,
+        "**/*.toc": true,
+        "**/*.bbl": true,
+        "**/*.blg": true,
+        "**/*.bcf": true,
+        "**/*.xml": true,
+        "**/*.run.xml": true,
+    }
 }
