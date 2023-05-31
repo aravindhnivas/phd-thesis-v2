@@ -1,7 +1,7 @@
 \subsection{Data analysis}
 \label{subsec:ir:data-analysis}
 
-This section will discuss the data processing, including calibration, normalization, and averaging process of the obtained spectra from the FELion instrument combined with FELIX. During the PhD work, an analysis software package based on Python 3 was developed \footnote{\url{https://felion-docs.vercel.app/}}.\\
+This section will discuss the data processing, including calibration, normalization, and averaging process of the obtained spectra from the FELion instrument combined with FELIX. During the PhD work, an analysis software package called FELionGUI, based on Python 3 was developed \footnote{Vist \url{https://felion-docs.vercel.app/} for FELionGUI documentation}.\\
 
 \begin{figure}[!htb]
     \centering
@@ -47,8 +47,8 @@ where $N_{OFF}$ is the baseline value and $N_{ON}(\nu)$ is the depleted value of
 
 To account for variations of the laser pulse energy $E$, pulse number $n$, and for saturation effects, the signal is normalised ($I$) as given below: 
 
-\[ I [\text{per J}]=\frac{- ln(N_{ON}(\nu)/N_{OFF})}{E[\text{in J}]} \]
+\[ I [\text{per J}]=\frac{- ln(N_{ON}(\nu)/N_{OFF})}{n \cdot E[\text{in J}]} \]
 
 where $I$ is the intensity in units of relative cross-section per Joule. 
 
-One can obtain a relative cross-section per photon by multiplying $I$ with the wavenumber. Figure \ref{fig:data-process:normalised} shows the final normalised spectrum. The measurements are repeated in the same frequency range for averaging, i.e., the final spectrum is obtained by averaging using statistical binning with a typical bin size of 1.5-2 \wn\ of all normalised data. Line parameters such as band positions, intensities, and line widths (fwhm) are then obtained with statistical errors by fitting a multi-component Gaussian function to the experimental data. Figure \ref{fig:data-process:normalised} shows the final normalised spectrum.
+One can obtain a relative cross-section per photon by multiplying $I$ with the wavenumber. Figure \ref{fig:data-process:normalised} shows the final normalised spectrum. The measurements are repeated in the same frequency range for averaging, i.e., the final spectrum is obtained by averaging using statistical binning with a typical bin size of 1.5-2 \wn\ of all normalised data. Line parameters such as band positions, intensities, and line widths (fwhm) are then obtained with statistical errors by fitting a multi-component Gaussian function to the experimental data. 

@@ -1,7 +1,7 @@
 \subsection{Numerical simulation}
 \label{subsec:ROSAA-simulation}
 
-The ROSAA action spectroscopic technique, as described in Section \ref{subsec:ROSAA} utilises the change in attachment rate of rotation-specific energy levels to record the pure rotational spectrum. As depicted in Figure \ref{fig:setup:ROSAA} there are several competing processes involved in affecting the molecular ions population distribution on different rotational levels, and consequently affecting the obtained signal intensity. Therefore, in this section, we discuss a kinetic numerical model approach to understanding the ROSAA signal intensity.
+The ROSAA action spectroscopic technique, as described in Section \ref{subsec:ROSAA} utilises the change in attachment rate of rotation-specific energy levels to record the pure rotational spectrum. As depicted in Figure \ref{fig:setup:ROSAA} there are several competing processes involved in affecting the molecular ion population distribution on different rotational levels, and consequently affecting the obtained signal intensity. Therefore, in this section, we discuss a kinetic numerical model approach to understanding the ROSAA signal intensity.
 
 \begin{figure}[!htb]
     \centering
@@ -35,7 +35,7 @@ The rate coefficients can be derived from a quantum dynamical investigation usin
     \frac{k_{if}}{k_{fi}} = \frac{G_f}{G_i} e^{\Delta E / \left(k_B T \right)}
 \end{equation}
 
-where $g_i$ indicates statistical weight of corresponding $|i\rangle$ state ($G_J = 2J + 1$), $k_B$ is the Boltzmann constant, $T$ is the temperature of the system, and $\Delta E$ is the difference between final state energy ($\epsilon _f$) and initial state ($\epsilon _f$) energy, i.e.:
+where $G_i$ indicates statistical weight of corresponding $|i\rangle$ state ($G_J = 2J + 1$), $k_B$ is the Boltzmann constant, $T$ is the temperature of the system, and $\Delta E$ is the difference between final state energy ($\epsilon _f$) and initial state ($\epsilon _f$) energy, i.e.:
 \[ \Delta E = \epsilon_f - \epsilon_i \]
 
 At a given $T$ (actually $T_{coll}$), if only the collisional process is involved, solving equation \ref{eqn:sim:coll}, equilibrium values are reached typically in few $100 \sim\mu$s at $[He]\sim 10^{14}\ $\percc leading to a distribution equal to the Boltzmann population at $T$, i.e.:
@@ -69,7 +69,7 @@ where $\epsilon _0$, $h$, $c$ and $\mu _{fi}$ are vacuum permittivity, Planck's 
     \label{eqn:sim:spontaneous-upper}
 \end{equation}
 
-The spontaneous rates are derived from the effective Hamiltonian fitting of a given molecular species using a program such as Pgopger \cite{western_pgopher_2017}. Typically, spontaneous emission rates are in the order of  $10^{-4}$ \pers which are smaller than collisional rates ($10^{3}-10^{5}$ \pers) at high number density ($>10^{14}$ \percc). Since the collisional processes dominate the spontaneous emission rates, for simplicity, the label $coll. + Spont.$ will just be referred as $coll.$.\\
+The spontaneous rates are derived from the effective Hamiltonian fitting of spectroscopic constants a given molecular species using a program such as Pgopger \cite{western_pgopher_2017}. Typically, spontaneous emission rates are in the order of  $10^{-4}$ \pers which are smaller than collisional rates ($10^{3}-10^{5}$ \pers) at high number density ($>10^{14}$ \percc). Since the collisional processes dominate the spontaneous emission rates, for simplicity, the label $coll. + Spont.$ will just be referred as $coll.$.\\
 
 \subsubsection{Radiative process (\texorpdfstring{$R_B$}{R_B})}
 \label{subsec:ROSAA-simulation-rad}
