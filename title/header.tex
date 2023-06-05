@@ -1,0 +1,66 @@
+\begin{center}
+
+    %% Extra whitespace at the top.
+    \vspace*{2\bigskipamount}
+
+    %% Print the title.
+    {\makeatletter
+        \titlestyle\bfseries\LARGE\@title
+        \makeatother}
+
+    %% Print the optional subtitle.
+    {\makeatletter
+        \ifx\@subtitle\undefined\else
+            \bigskip
+            \titlefont\titleshape\Large\@subtitle
+        \fi
+        \makeatother}
+
+\end{center}
+
+\clearpage
+\thispagestyle{empty}
+
+
+\bigskip
+\bigskip
+
+\begin{center}
+    \includegraphics[height=0.5in]{_logos/Logo_RU_NL_RGB.pdf}
+    \hspace{2em}
+    \includegraphics[height=0.5in]{_logos/NWO.jpg}
+\end{center}
+\vfill
+\noindent
+
+\begin{tabular}{@{}p{0.2\textwidth}@{}p{0.8\textwidth}@{}}
+    \textit{Keywords:}    &  astrochemistry, molecular ions, cryogenic ion trap, vibrational spectra, rotational spectra, Renner-Tellar effects \\[\medskipamount]
+    \textit{Printed by:}   & \\[\medskipamount]
+    \textit{Cover by:} & {
+        \makeatletter
+        \@initials~\@lastname
+        \makeatother
+    }
+\end{tabular}
+
+\vspace{4\bigskipamount}
+
+\noindent Copyright \textcopyright{} \the\year{} by{
+    \makeatletter
+    \@initials~\@lastname
+    \makeatother
+}
+
+\medskip
+\noindent ISBN 000-00-0000-000-0
+
+\medskip
+% \noindent An electronic copy of this dissertation is available at\\
+% \url{https://repository.ru.nl/ ?}.
+This work is part of the research programme "ROSAA" with project number 740.018.010 and “HFML-FELIX: a 
+Dutch Centre of Excellence for Science under Extreme Conditions” (with project number 184.035.011) of the research 
+programme “Nationale Roadmap Grootschalige Wetenschappelijke Infastructuur”, which is (partly) financed by the 
+Netherlands Organisation for Scientific Research (NWO).
+\cleardoublepage
+
+\thispagestyle{empty}
