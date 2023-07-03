@@ -49,5 +49,7 @@
 \newcommand{\qt}[1]{“#1”}
 \newcommand{\enclose}[1]{\left( #1 \right) }
 
-% \newcommand{\citepublication}[4]{#1, \textit{#2}, \textbf{#3}. doi:\href{https://doi.org/#4}{#4}}
-\newcommand{\citepublication}[4]{\textbf{#2}\\#1\\\textit{#3}. doi:\href{https://doi.org/#4}{#4}}
+\newcommand{\citepublication}[4]{%
+  \textbf{#2}\\#1\\\textit{#3}%
+  \ifthenelse{\equal{#4}{}}{}{. doi:\href{https://doi.org/#4}{#4}}%
+}
