@@ -49,17 +49,5 @@
 \newcommand{\qt}[1]{“#1”}
 \newcommand{\enclose}[1]{\left( #1 \right) }
 
-% \newcommand{\quoteIt}[2]{
-%     \begin{flushright}
-%     \say{\emph{#1}}\\ 
-%         $-$ #2
-%     \end{flushright}
-% }
-
-% \let\hyperappchapter\chapter
-% \def\appchapter{\@ifstar\starappchapter\myappchapter}
-% \def\starappchapter{\hyperappchapter*}
-% \newcommand{\myappchapter}[2][\@empty]% #1=optional (toc and top of page), #2=title
-% {\ifx#1\@empty \hyperchapter[#2]{\hyperlink{toc.appendix.\thechapter}{#2}}
-%  \else \hyperchapter[#1]{\hyperlink{toc.appendix.\thechapter}{#2}}
-%  \fi}
+% \newcommand{\citepublication}[4]{#1, \textit{#2}, \textbf{#3}. doi:\href{https://doi.org/#4}{#4}}
+\newcommand{\citepublication}[4]{\textbf{#2}\\#1\\\textit{#3}. doi:\href{https://doi.org/#4}{#4}}
