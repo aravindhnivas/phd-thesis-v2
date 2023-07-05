@@ -122,18 +122,35 @@
 
 \RequirePackage{_style/color-tudelft}
 
+% %% Set the paper size to 17 by 24 cm, approximately halfway between A4 and A5.
+% \if@print
+%     %% In print mode we add a 3 mm bleed on the outside of the page.
+%     \geometry{
+%         papersize = {173mm,246mm},
+%         layoutsize = {167mm,240mm},
+%         layoutoffset = {3mm,3mm},
+%         bindingoffset = -3mm
+%     }
+% \else
+%     \geometry{papersize={170mm,240mm}}
+% \fi
+
+% Ridderprint
+%% This sets an optional print setting; the print setting can be activated by passing print to the \documentclass line.
 %% Set the paper size to 17 by 24 cm, approximately halfway between A4 and A5.
 \if@print
     %% In print mode we add a 3 mm bleed on the outside of the page.
     \geometry{
-        papersize = {173mm,246mm},
-        layoutsize = {167mm,240mm},
+        papersize = {176mm,246mm},
+        layoutsize = {170mm,240mm},
         layoutoffset = {3mm,3mm},
         bindingoffset = -3mm
     }
 \else
-    \geometry{papersize={170mm,240mm}}
+    \geometry{papersize={176mm,246mm}}
 \fi
+% Ridderprint
+
 %% We decrease the margins slightly from the default (scale = 0.7).
 \geometry{hscale=0.75,vscale=0.8}
 \setlength{\marginparwidth}{20mm}
